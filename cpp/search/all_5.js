@@ -22,9 +22,10 @@ var searchData=
   ['flags_165',['flags',['../classgtirb_1_1_section.html#a50b0a77a2bc0aa2efe0550153ab86575',1,'gtirb::Section']]],
   ['flags_5fbegin_166',['flags_begin',['../classgtirb_1_1_section.html#af25b3bd344e05ed8113d6fdfcbb5f63f',1,'gtirb::Section']]],
   ['flags_5fend_167',['flags_end',['../classgtirb_1_1_section.html#a53f0647922c73831ad7fdc069e243740',1,'gtirb::Section']]],
-  ['frombytes_168',['fromBytes',['../group___a_u_x_d_a_t_a___g_r_o_u_p.html#ga9d5a895b92c65d865494b1876d0c7498',1,'gtirb::auxdata_traits']]],
-  ['fromprotobuf_169',['fromProtobuf',['../structgtirb_1_1_offset.html#ac16841516781b615d92f8913bc8ffdbe',1,'gtirb::Offset']]],
-  ['functionblocks_170',['FunctionBlocks',['../structgtirb_1_1schema_1_1_function_blocks.html',1,'gtirb::schema']]],
-  ['functionentries_171',['FunctionEntries',['../structgtirb_1_1schema_1_1_function_entries.html',1,'gtirb::schema']]],
-  ['functionnames_172',['FunctionNames',['../structgtirb_1_1schema_1_1_function_names.html',1,'gtirb::schema']]]
+  ['forgetallocations_168',['ForgetAllocations',['../class_specific_bump_ptr_allocator.html#a198666056a5eec27c8d9412ad92b83a4',1,'SpecificBumpPtrAllocator::ForgetAllocations()'],['../classgtirb_1_1_context.html#a0d0ed406000de9e442710dc172781a42',1,'gtirb::Context::ForgetAllocations()']]],
+  ['frombytes_169',['fromBytes',['../group___a_u_x_d_a_t_a___g_r_o_u_p.html#ga9d5a895b92c65d865494b1876d0c7498',1,'gtirb::auxdata_traits']]],
+  ['fromprotobuf_170',['fromProtobuf',['../structgtirb_1_1_offset.html#ac16841516781b615d92f8913bc8ffdbe',1,'gtirb::Offset']]],
+  ['functionblocks_171',['FunctionBlocks',['../structgtirb_1_1schema_1_1_function_blocks.html',1,'gtirb::schema']]],
+  ['functionentries_172',['FunctionEntries',['../structgtirb_1_1schema_1_1_function_entries.html',1,'gtirb::schema']]],
+  ['functionnames_173',['FunctionNames',['../structgtirb_1_1schema_1_1_function_names.html',1,'gtirb::schema']]]
 ];

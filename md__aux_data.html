@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,22 +68,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md32">Standard AuxData Schemata</a><ul><li class="level2"><a href="#autotoc_md33">Sanctioned AuxData Tables</a><ul><li class="level3"><a href="#autotoc_md34">functionBlocks</a></li>
-<li class="level3"><a href="#autotoc_md35">functionEntries</a></li>
-<li class="level3"><a href="#autotoc_md36">functionNames</a></li>
-<li class="level3"><a href="#autotoc_md37">types</a></li>
-<li class="level3"><a href="#autotoc_md38">alignment</a></li>
-<li class="level3"><a href="#autotoc_md39">comments</a></li>
-<li class="level3"><a href="#autotoc_md40">symbolForwarding</a></li>
-<li class="level3"><a href="#autotoc_md41">padding</a></li>
+<ul><li class="level1"><a href="#autotoc_md33">Standard AuxData Schemata</a><ul><li class="level2"><a href="#autotoc_md34">Sanctioned AuxData Tables</a><ul><li class="level3"><a href="#autotoc_md35">functionBlocks</a></li>
+<li class="level3"><a href="#autotoc_md36">functionEntries</a></li>
+<li class="level3"><a href="#autotoc_md37">functionNames</a></li>
+<li class="level3"><a href="#autotoc_md38">types</a></li>
+<li class="level3"><a href="#autotoc_md39">alignment</a></li>
+<li class="level3"><a href="#autotoc_md40">comments</a></li>
+<li class="level3"><a href="#autotoc_md41">symbolForwarding</a></li>
+<li class="level3"><a href="#autotoc_md42">padding</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md42">Provisional AuxData Tables</a></li>
+<li class="level2"><a href="#autotoc_md43">Provisional AuxData Tables</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md32"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md33"></a>
 Standard AuxData Schemata</h1>
 <p><a class="anchor" id="standard-auxdata-schemata"></a></p>
 <p>The <a class="elRef" href="../html/cpp/group___a_u_x_d_a_t_a___g_r_o_u_p.html">AuxData</a> class provides generic storage for application-specific data. This allows data to be attached to either the IR or Module classes in GTIRB.</p>
@@ -157,7 +157,7 @@ Standard AuxData Schemata</h1>
 <div class="line">  // Subsequently access the Foo table through the AuxData interface.</div>
 <div class="line">  module.getAuxData&lt;MyAuxDataFoo&gt;()-&gt;some_member_function();</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md34"></a>
 Sanctioned AuxData Tables</h2>
 <p><a class="anchor" id="sanctioned-auxdata-tables"></a></p>
 <p>The following are the sanctioned AuxData table schemata.</p>
@@ -181,7 +181,7 @@ Sanctioned AuxData Tables</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><a href="#padding"><code>"padding"</code></a> </td><td class="markdownTableBodyNone"><code>std::map&lt;<a class="elRef" href="../html/cpp/structgtirb_1_1_offset.html">gtirb::Offset</a>, uint64_t&gt;</code>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md34"></a>
+<h3><a class="anchor" id="autotoc_md35"></a>
 functionBlocks</h3>
 <p><a class="anchor" id="functionblocks"></a></p>
 <table class="markdownTable">
@@ -198,7 +198,7 @@ functionBlocks</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md35"></a>
+<h3><a class="anchor" id="autotoc_md36"></a>
 functionEntries</h3>
 <p><a class="anchor" id="functionentries"></a></p>
 <table class="markdownTable">
@@ -215,7 +215,7 @@ functionEntries</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md36"></a>
+<h3><a class="anchor" id="autotoc_md37"></a>
 functionNames</h3>
 <p><a class="anchor" id="functionnames"></a></p>
 <table class="markdownTable">
@@ -232,7 +232,7 @@ functionNames</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md37"></a>
+<h3><a class="anchor" id="autotoc_md38"></a>
 types</h3>
 <p><a class="anchor" id="types"></a></p>
 <table class="markdownTable">
@@ -249,7 +249,7 @@ types</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md39"></a>
 alignment</h3>
 <p><a class="anchor" id="alignment"></a></p>
 <table class="markdownTable">
@@ -266,7 +266,7 @@ alignment</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md39"></a>
+<h3><a class="anchor" id="autotoc_md40"></a>
 comments</h3>
 <p><a class="anchor" id="comments"></a></p>
 <table class="markdownTable">
@@ -283,7 +283,7 @@ comments</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md41"></a>
 symbolForwarding</h3>
 <p><a class="anchor" id="symbolforwarding"></a></p>
 <table class="markdownTable">
@@ -300,7 +300,7 @@ symbolForwarding</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md41"></a>
+<h3><a class="anchor" id="autotoc_md42"></a>
 padding</h3>
 <p><a class="anchor" id="padding"></a></p>
 <table class="markdownTable">
@@ -317,7 +317,7 @@ padding</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">AttachedTo </td><td class="markdownTableBodyNone">Module  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md43"></a>
 Provisional AuxData Tables</h2>
 <p><a class="anchor" id="provisional-auxdata-tables"></a></p>
 <p>There are currently no provisional table schemata. </p>

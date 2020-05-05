@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,28 +68,28 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md193">SymAddrAddr</a><ul><li class="level2"><a href="#autotoc_md194">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md195">API Implementations</a><ul><li class="level3"><a href="#autotoc_md196">SymAddrAddr Classes</a></li>
-<li class="level3"><a href="#autotoc_md197">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md198">scale</a></li>
-<li class="level4"><a href="#autotoc_md199">offset</a></li>
-<li class="level4"><a href="#autotoc_md200">symbol1_uuid</a></li>
-<li class="level4"><a href="#autotoc_md201">symbol2_uuid</a></li>
+<ul><li class="level1"><a href="#autotoc_md194">SymAddrAddr</a><ul><li class="level2"><a href="#autotoc_md195">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md196">API Implementations</a><ul><li class="level3"><a href="#autotoc_md197">SymAddrAddr Classes</a></li>
+<li class="level3"><a href="#autotoc_md198">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md199">scale</a></li>
+<li class="level4"><a href="#autotoc_md200">offset</a></li>
+<li class="level4"><a href="#autotoc_md201">symbol1_uuid</a></li>
+<li class="level4"><a href="#autotoc_md202">symbol2_uuid</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md202">Links</a></li>
+<li class="level2"><a href="#autotoc_md203">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md193"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md194"></a>
 SymAddrAddr</h1>
 <p><a class="anchor" id="symaddraddr"></a></p>
 <p>A <b>SymAddrAddr</b> represents a symbolic operand of the form "(Sym1 -
 Sym2) / Scale + Offset".</p>
 <p>The corresponding Protobuf message type is <code>SymAddrAddr</code>.</p>
-<h2><a class="anchor" id="autotoc_md194"></a>
+<h2><a class="anchor" id="autotoc_md195"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -102,11 +102,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md195"></a>
+<h2><a class="anchor" id="autotoc_md196"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md196"></a>
+<h3><a class="anchor" id="autotoc_md197"></a>
 SymAddrAddr Classes</h3>
 <p><a class="anchor" id="symaddraddr-classes"></a></p>
 <table class="markdownTable">
@@ -119,10 +119,10 @@ SymAddrAddr Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>sym-addr-addr</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md197"></a>
+<h3><a class="anchor" id="autotoc_md198"></a>
 Required Field Getters/Setters</h3>
 <p><a class="anchor" id="required-field-getterssetters"></a></p>
-<h4><a class="anchor" id="autotoc_md198"></a>
+<h4><a class="anchor" id="autotoc_md199"></a>
 scale</h4>
 <p><a class="anchor" id="scale"></a></p>
 <table class="markdownTable">
@@ -135,7 +135,7 @@ scale</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>scale</b> (<em>obj</em> <em>sym-addr-addr</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>scale</b> (<em>obj</em> <em>sym-addr-addr</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md199"></a>
+<h4><a class="anchor" id="autotoc_md200"></a>
 offset</h4>
 <p><a class="anchor" id="offset"></a></p>
 <table class="markdownTable">
@@ -148,7 +148,7 @@ offset</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>offset</b> (<em>obj</em> <em>sym-addr-addr</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>offset</b> (<em>obj</em> <em>sym-addr-addr</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md200"></a>
+<h4><a class="anchor" id="autotoc_md201"></a>
 symbol1_uuid</h4>
 <p><a class="anchor" id="symbol1_uuid"></a></p>
 <table class="markdownTable">
@@ -161,7 +161,7 @@ symbol1_uuid</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>symbols</b> (<em>object</em> <em>symbolic-expression</em>) =&gt; <em>result</em>, first <b>symbol</b> in <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>symbols</b> (<em>object</em> <em>symbolic-expression</em>)) <em>new-value</em>), first <b>symbol</b> in <em>new-value</em>  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md201"></a>
+<h4><a class="anchor" id="autotoc_md202"></a>
 symbol2_uuid</h4>
 <p><a class="anchor" id="symbol2_uuid"></a></p>
 <table class="markdownTable">
@@ -174,7 +174,7 @@ symbol2_uuid</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>symbols</b> (<em>object</em> <em>symbolic-expression</em>) =&gt; <em>result</em>, second <b>symbol</b> in <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>symbols</b> (<em>object</em> <em>symbolic-expression</em>)) <em>new-value</em>), second <b>symbol</b> in <em>new-value</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md202"></a>
+<h2><a class="anchor" id="autotoc_md203"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

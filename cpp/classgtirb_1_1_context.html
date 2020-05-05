@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -91,6 +91,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a097d32a5178babd1f999d46feb90de58"><td class="memTemplItemLeft" align="right" valign="top">NodeTy *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">Create</a> (Args &amp;&amp;... TheArgs)</td></tr>
 <tr class="memdesc:a097d32a5178babd1f999d46feb90de58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an object of type T.  <a href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">More...</a><br /></td></tr>
 <tr class="separator:a097d32a5178babd1f999d46feb90de58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d0ed406000de9e442710dc172781a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_context.html#a0d0ed406000de9e442710dc172781a42">ForgetAllocations</a> ()</td></tr>
+<tr class="memdesc:a0d0ed406000de9e442710dc172781a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forgets all arena allocations held by this <a class="el" href="classgtirb_1_1_context.html">Context</a> object. This can be useful under circumstances where leaking the memory is acceptable, such as when shutting a program down.  <a href="classgtirb_1_1_context.html#a0d0ed406000de9e442710dc172781a42">More...</a><br /></td></tr>
+<tr class="separator:a0d0ed406000de9e442710dc172781a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -179,6 +182,25 @@ template&lt;typename NodeTy , typename... Args&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A newly created object, allocated within the <a class="el" href="classgtirb_1_1_context.html" title="The context under which GTIRB operations occur.">Context</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a0d0ed406000de9e442710dc172781a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d0ed406000de9e442710dc172781a42">&#9670;&nbsp;</a></span>ForgetAllocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gtirb::Context::ForgetAllocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Forgets all arena allocations held by this <a class="el" href="classgtirb_1_1_context.html">Context</a> object. This can be useful under circumstances where leaking the memory is acceptable, such as when shutting a program down. </p>
 
 </div>
 </div>

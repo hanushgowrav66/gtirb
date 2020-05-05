@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,25 +68,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md132">IR</a><ul><li class="level2"><a href="#autotoc_md133">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md134">API Implementations</a><ul><li class="level3"><a href="#autotoc_md135">IR Classes and AuxDataContainer functionality</a></li>
-<li class="level3"><a href="#autotoc_md136">GTIRB Protobuf API Version</a></li>
-<li class="level3"><a href="#autotoc_md137">File Save/Load</a></li>
-<li class="level3"><a href="#autotoc_md138">Get and Set Modules</a></li>
-<li class="level3"><a href="#autotoc_md139">CFG</a></li>
+<ul><li class="level1"><a href="#autotoc_md133">IR</a><ul><li class="level2"><a href="#autotoc_md134">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md135">API Implementations</a><ul><li class="level3"><a href="#autotoc_md136">IR Classes and AuxDataContainer functionality</a></li>
+<li class="level3"><a href="#autotoc_md137">GTIRB Protobuf API Version</a></li>
+<li class="level3"><a href="#autotoc_md138">File Save/Load</a></li>
+<li class="level3"><a href="#autotoc_md139">Get and Set Modules</a></li>
+<li class="level3"><a href="#autotoc_md140">CFG</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md140">Links</a></li>
+<li class="level2"><a href="#autotoc_md141">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md132"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md133"></a>
 IR</h1>
 <p><a class="anchor" id="ir"></a></p>
 <p><b>IR</b> describes the <em>internal representation</em> of a software artifact.</p>
 <p>The corresponding Protobuf message type is <code>IR</code>.</p>
-<h2><a class="anchor" id="autotoc_md133"></a>
+<h2><a class="anchor" id="autotoc_md134"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -100,11 +100,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md134"></a>
+<h2><a class="anchor" id="autotoc_md135"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md135"></a>
+<h3><a class="anchor" id="autotoc_md136"></a>
 IR Classes and AuxDataContainer functionality</h3>
 <p><a class="anchor" id="ir-classes-and-auxdatacontainer-functionality"></a></p>
 <table class="markdownTable">
@@ -117,7 +117,7 @@ IR Classes and AuxDataContainer functionality</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>gtirb</b> </td><td class="markdownTableBodyLeft">via <b>aux-data</b> class and specializations <b>aux-data</b> (<em>object</em> <em>gtirb</em>) =&gt; <em>result</em>, (setf (<b>aux-data</b> (<em>object</em> <em>gtirb</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md136"></a>
+<h3><a class="anchor" id="autotoc_md137"></a>
 GTIRB Protobuf API Version</h3>
 <p><a class="anchor" id="gtirb-protobuf-api-version"></a></p>
 <table class="markdownTable">
@@ -130,7 +130,7 @@ GTIRB Protobuf API Version</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>version</b> (<em>obj</em> <em>gtirb</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>version</b> (<em>obj</em> <em>gtirb</em>)) <em>new</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md137"></a>
+<h3><a class="anchor" id="autotoc_md138"></a>
 File Save/Load</h3>
 <p><a class="anchor" id="file-saveload"></a></p>
 <table class="markdownTable">
@@ -143,7 +143,7 @@ File Save/Load</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>write-gtirb</b> <em>gtirb</em> <em>path</em> =&gt; <em>result</em> </td><td class="markdownTableBodyLeft"><b>read-gtirb</b> <em>path</em> =&gt; <em>result</em>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md138"></a>
+<h3><a class="anchor" id="autotoc_md139"></a>
 Get and Set Modules</h3>
 <p><a class="anchor" id="get-and-set-modules"></a></p>
 <table class="markdownTable">
@@ -156,7 +156,7 @@ Get and Set Modules</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Common Lisp </td><td class="markdownTableBodyLeft"><b>modules</b> (<em>object</em> <em>gtirb</em>) =&gt; result </td><td class="markdownTableBodyLeft">(setf (<b>modules</b> (<em>object</em> <em>gtirb</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md139"></a>
+<h3><a class="anchor" id="autotoc_md140"></a>
 CFG</h3>
 <p><a class="anchor" id="cfg"></a></p>
 <table class="markdownTable">
@@ -169,7 +169,7 @@ CFG</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>cfg</b> (<em>object</em> <em>gtirb</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>cfg</b> (<em>object</em> <em>gtirb</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md141"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,35 +68,35 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md43">Contributing</a><ul><li class="level2"><a href="#autotoc_md44">Code of Conduct</a></li>
-<li class="level2"><a href="#autotoc_md45">General Guidelines</a><ul><li class="level3"><a href="#autotoc_md46">pre-commit</a></li>
+<ul><li class="level1"><a href="#autotoc_md44">Contributing</a><ul><li class="level2"><a href="#autotoc_md45">Code of Conduct</a></li>
+<li class="level2"><a href="#autotoc_md46">General Guidelines</a><ul><li class="level3"><a href="#autotoc_md47">pre-commit</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md47">C++ Code Requirements</a><ul><li class="level3"><a href="#autotoc_md48">Testing Development</a></li>
+<li class="level2"><a href="#autotoc_md48">C++ Code Requirements</a><ul><li class="level3"><a href="#autotoc_md49">Testing Development</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md49">Python Code Requirements</a><ul><li class="level3"><a href="#autotoc_md50">Testing Development</a></li>
+<li class="level2"><a href="#autotoc_md50">Python Code Requirements</a><ul><li class="level3"><a href="#autotoc_md51">Testing Development</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md51">Documentation</a><ul><li class="level3"><a href="#autotoc_md52">Building Documentation</a></li>
-<li class="level3"><a href="#autotoc_md53">Contributing Markdown Documentation</a></li>
-<li class="level3"><a href="#autotoc_md54">Graphviz</a></li>
-<li class="level3"><a href="#autotoc_md55">Python</a></li>
-<li class="level3"><a href="#autotoc_md56">Common Lisp</a></li>
+<li class="level2"><a href="#autotoc_md52">Documentation</a><ul><li class="level3"><a href="#autotoc_md53">Building Documentation</a></li>
+<li class="level3"><a href="#autotoc_md54">Contributing Markdown Documentation</a></li>
+<li class="level3"><a href="#autotoc_md55">Graphviz</a></li>
+<li class="level3"><a href="#autotoc_md56">Python</a></li>
+<li class="level3"><a href="#autotoc_md57">Common Lisp</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md43"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md44"></a>
 Contributing</h1>
 <p><a class="anchor" id="contributing"></a></p>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md45"></a>
 Code of Conduct</h2>
 <p><a class="anchor" id="code-of-conduct"></a></p>
 <p>Please read the GTIRB Code of Conduct.</p>
-<h2><a class="anchor" id="autotoc_md45"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 General Guidelines</h2>
 <p><a class="anchor" id="general-guidelines"></a></p>
 <ul>
@@ -105,7 +105,7 @@ General Guidelines</h2>
 <li>All tests should be able to run and pass. This can be checked by running <code>make check</code> on your build directory after running <code>cmake</code>.</li>
 <li>All CMake files shall be formatted with <a href="https://pypi.org/project/cmake-format/">cmake-format</a>. A <code>.cmake-format</code> file is provided in the root directory for the project, and a pass through this tool is included as part of our <code>pre-commit</code> configuration (see below for details).</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md46"></a>
+<h3><a class="anchor" id="autotoc_md47"></a>
 pre-commit</h3>
 <p><a class="anchor" id="pre-commit"></a></p>
 <p>In general, code must follow a unified format. To make compliance with this format easier, we recommend the use of <a href="https://pre-commit.com/"><code>pre-commit</code></a> with the provided configuration file, <code>.pre-commit-config.yaml</code>, to manage formatting. To use <code>pre-commit</code>:</p>
@@ -117,7 +117,7 @@ pre-commit</h3>
 </div><!-- fragment --><p class="startli">If you prefer to run <code>pre-commit</code> manually instead, run this before all commits: </p><div class="fragment"><div class="line">pre-commit run</div>
 </div><!-- fragment --></li>
 </ol>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md48"></a>
 C++ Code Requirements</h2>
 <p><a class="anchor" id="c++-code-requirements"></a></p>
 <ul>
@@ -144,7 +144,7 @@ C++ Code Requirements</h2>
 <li><code>#include</code> as little as possible to reduce compile times. Use forward declarations of classes when possible to avoid including their definitions.</li>
 <li>Do not introduce variables to the code that would require a client to dllimport them. <a class="elRef" href="../html/cpp/_export_8hpp.html">Export.hpp</a> does not setup dllimport declarations for clients. For example, do not add static function-local variables in inline functions in header files.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md48"></a>
+<h3><a class="anchor" id="autotoc_md49"></a>
 Testing Development</h3>
 <p><a class="anchor" id="testing-development"></a></p>
 <ul>
@@ -155,7 +155,7 @@ Testing Development</h3>
 <li>Test names are prefixed with the type of test they are (<code>Unit_</code>, <code>System_</code>, <code>Integration_</code>).</li>
 <li>No unit test should take more than 0.5 seconds.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md49"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Python Code Requirements</h2>
 <p><a class="anchor" id="python-code-requirements"></a></p>
 <ul>
@@ -167,7 +167,7 @@ Python Code Requirements</h2>
 <li>The Python API should be made to run on all version of Python 3.</li>
 <li>Use <code>UpperCamelCase</code> for type names, <code>UPPER_CASE</code> for constant names, and <code>snake_case</code> for other identifier names.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md50"></a>
+<h3><a class="anchor" id="autotoc_md51"></a>
 Testing Development</h3>
 <p><a class="anchor" id="testing-development"></a></p>
 <ul>
@@ -176,11 +176,11 @@ Testing Development</h3>
 <li>Code testing is done via the built-in <code>unittest</code> framework.</li>
 <li>No unit test should take more than 0.5 seconds.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md52"></a>
 Documentation</h2>
 <p><a class="anchor" id="documentation"></a></p>
 <p>The GTIRB documentation consists of complete documentation for all components of the GTIRB API, along with examples and other usage information.</p>
-<h3><a class="anchor" id="autotoc_md52"></a>
+<h3><a class="anchor" id="autotoc_md53"></a>
 Building Documentation</h3>
 <p><a class="anchor" id="building-documentation"></a></p>
 <p>At minimum, you will need <a href="https://cmake.org/">CMake</a> and <a href="http://www.doxygen.nl/">Doxygen</a>. To build the documentation:</p>
@@ -209,7 +209,7 @@ Building Documentation</h3>
 <p class="startli">If this option is not specified, <code>cmake</code> will attempt to generate Python API documentation if and only if it can locate a Python installation, failing if <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a>, <a href="https://pypi.org/project/sphinx-autodoc-typehints/">sphinx-autodoc-typehints</a>, or the Python API dependencies are not available.</p>
 </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md53"></a>
+<h3><a class="anchor" id="autotoc_md54"></a>
 Contributing Markdown Documentation</h3>
 <p><a class="anchor" id="contributing-markdown-documentation"></a></p>
 <p>To add a new markdown document to the documentation:</p>
@@ -229,7 +229,7 @@ Contributing Markdown Documentation</h3>
 </ul>
 </li>
 </ol>
-<h3><a class="anchor" id="autotoc_md54"></a>
+<h3><a class="anchor" id="autotoc_md55"></a>
 Graphviz</h3>
 <p><a class="anchor" id="graphviz"></a></p>
 <ul>
@@ -241,7 +241,7 @@ Graphviz</h3>
 </li>
 <li>Use the <code>arial</code> font.</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md55"></a>
+<h3><a class="anchor" id="autotoc_md56"></a>
 Python</h3>
 <p><a class="anchor" id="python"></a></p>
 <p>For the Python API, <a href="https://www.sphinx-doc.org/en/master/">Sphinx</a> and <a href="https://pypi.org/project/sphinx-autodoc-typehints/">related plugins</a> are required. To install these via <a href="https://pip.pypa.io/en/stable/">pip</a>, run:</p>
@@ -250,7 +250,7 @@ Python</h3>
 <div class="fragment"><div class="line">cd &lt;PATH_TO_GTIRB&gt;/build/python</div>
 <div class="line">python3 setup.py egg_info</div>
 <div class="line">pip3 install -r gtirb.egg-info/requires.txt</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md56"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md57"></a>
 Common Lisp</h3>
 <p><a class="anchor" id="common-lisp"></a></p>
 <p>For the Common Lisp API, <a href="https://github.com/eschulte/simpler-documentation-template">simpler-documentation-template (SDT)</a> is required. This package should automatically be downloaded via the build process; see <code>cl/README.md</code> for details on how to prepare the Common Lisp API. </p>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -84,6 +84,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6fdd189936477d34f492fd3828169d6d"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specific_bump_ptr_allocator.html#a6fdd189936477d34f492fd3828169d6d">Allocate</a> (size_t num=1)</td></tr>
 <tr class="memdesc:a6fdd189936477d34f492fd3828169d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate space for an array of objects without constructing them.  <a href="class_specific_bump_ptr_allocator.html#a6fdd189936477d34f492fd3828169d6d">More...</a><br /></td></tr>
 <tr class="separator:a6fdd189936477d34f492fd3828169d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198666056a5eec27c8d9412ad92b83a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specific_bump_ptr_allocator.html#a198666056a5eec27c8d9412ad92b83a4">ForgetAllocations</a> ()</td></tr>
+<tr class="separator:a198666056a5eec27c8d9412ad92b83a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b325df8de78f41303460b9a9fc0cb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_specific_bump_ptr_allocator.html">SpecificBumpPtrAllocator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specific_bump_ptr_allocator.html#a06b325df8de78f41303460b9a9fc0cb6">operator=</a> (<a class="el" href="class_specific_bump_ptr_allocator.html">SpecificBumpPtrAllocator</a> &amp;&amp;RHS)</td></tr>
 <tr class="separator:a06b325df8de78f41303460b9a9fc0cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -204,6 +206,34 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Allocate space for an array of objects without constructing them. </p>
+
+</div>
+</div>
+<a id="a198666056a5eec27c8d9412ad92b83a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198666056a5eec27c8d9412ad92b83a4">&#9670;&nbsp;</a></span>ForgetAllocations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_specific_bump_ptr_allocator.html">SpecificBumpPtrAllocator</a>&lt; T &gt;::ForgetAllocations </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Forgets all allocations from the underlying allocator, effectively leaking the memory. This is useful when the allocator is no longer needed and the operating system will be reclaiming the memory (such as at </p>
 
 </div>
 </div>

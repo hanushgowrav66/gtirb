@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,33 +68,33 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md119">CodeBlock</a><ul><li class="level2"><a href="#autotoc_md120">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md121">API Implementations</a><ul><li class="level3"><a href="#autotoc_md122">CodeBlock Classes</a></li>
-<li class="level3"><a href="#autotoc_md123">decode_mode Getters/Setters</a></li>
+<ul><li class="level1"><a href="#autotoc_md120">CodeBlock</a><ul><li class="level2"><a href="#autotoc_md121">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md122">API Implementations</a><ul><li class="level3"><a href="#autotoc_md123">CodeBlock Classes</a></li>
+<li class="level3"><a href="#autotoc_md124">decode_mode Getters/Setters</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md124">Links</a></li>
+<li class="level2"><a href="#autotoc_md125">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md119"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md120"></a>
 CodeBlock</h1>
 <p><a class="anchor" id="codeblock"></a></p>
 <p>A <b>CodeBlock</b> represents a basic block in the binary.</p>
 <p>The corresponding Protobuf message type is <code>CodeBlock</code>.</p>
-<h2><a class="anchor" id="autotoc_md120"></a>
+<h2><a class="anchor" id="autotoc_md121"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
 <li>A <b>CodeBlock</b> is a <a class="el" href="md__byte_block.html">ByteBlock</a> and a <a class="el" href="md__cfg_node.html">CfgNode</a>.</li>
 <li>Each <b>CodeBlock</b> must store its <b>decode_mode</b>, and this value must be readable and writable.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md121"></a>
+<h2><a class="anchor" id="autotoc_md122"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md122"></a>
+<h3><a class="anchor" id="autotoc_md123"></a>
 CodeBlock Classes</h3>
 <p><a class="anchor" id="codeblock-classes"></a></p>
 <table class="markdownTable">
@@ -107,7 +107,7 @@ CodeBlock Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>code-block</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md123"></a>
+<h3><a class="anchor" id="autotoc_md124"></a>
 decode_mode Getters/Setters</h3>
 <p><a class="anchor" id="decode_mode-getterssetters"></a></p>
 <table class="markdownTable">
@@ -120,7 +120,7 @@ decode_mode Getters/Setters</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>decode-mode</b> (<em>obj</em> <em>code-block</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>decode-mode</b> (<em>obj</em> <em>code-block</em>)) <em>new</em>)  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md124"></a>
+<h2><a class="anchor" id="autotoc_md125"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

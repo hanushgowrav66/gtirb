@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,28 +68,28 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md169">Section</a><ul><li class="level2"><a href="#autotoc_md170">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md171">API Implementations</a><ul><li class="level3"><a href="#autotoc_md172">Section Classes</a></li>
-<li class="level3"><a href="#autotoc_md173">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md174">name</a></li>
-<li class="level4"><a href="#autotoc_md175">section_flags</a></li>
-<li class="level4"><a href="#autotoc_md176">byte_intervals</a></li>
+<ul><li class="level1"><a href="#autotoc_md170">Section</a><ul><li class="level2"><a href="#autotoc_md171">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md172">API Implementations</a><ul><li class="level3"><a href="#autotoc_md173">Section Classes</a></li>
+<li class="level3"><a href="#autotoc_md174">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md175">name</a></li>
+<li class="level4"><a href="#autotoc_md176">section_flags</a></li>
+<li class="level4"><a href="#autotoc_md177">byte_intervals</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md177">Find ByteInterval Objects...</a></li>
-<li class="level3"><a href="#autotoc_md178">Associated Module</a></li>
+<li class="level3"><a href="#autotoc_md178">Find ByteInterval Objects...</a></li>
+<li class="level3"><a href="#autotoc_md179">Associated Module</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md179">Links</a></li>
+<li class="level2"><a href="#autotoc_md180">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md169"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md170"></a>
 Section</h1>
 <p><a class="anchor" id="section"></a></p>
 <p>A <b>Section</b> represents a named section of a binary.</p>
 <p>The corresponding Protobuf message type is <code>Section</code>.</p>
-<h2><a class="anchor" id="autotoc_md170"></a>
+<h2><a class="anchor" id="autotoc_md171"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -110,11 +110,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<h2><a class="anchor" id="autotoc_md172"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md172"></a>
+<h3><a class="anchor" id="autotoc_md173"></a>
 Section Classes</h3>
 <p><a class="anchor" id="section-classes"></a></p>
 <table class="markdownTable">
@@ -127,10 +127,10 @@ Section Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>section</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md173"></a>
+<h3><a class="anchor" id="autotoc_md174"></a>
 Required Field Getters/Setters</h3>
 <p><a class="anchor" id="required-field-getterssetters"></a></p>
-<h4><a class="anchor" id="autotoc_md174"></a>
+<h4><a class="anchor" id="autotoc_md175"></a>
 name</h4>
 <p><a class="anchor" id="name"></a></p>
 <table class="markdownTable">
@@ -143,7 +143,7 @@ name</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>name</b> (<em>obj</em> <em>section</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>name</b> (<em>obj</em> <em>section</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md175"></a>
+<h4><a class="anchor" id="autotoc_md176"></a>
 section_flags</h4>
 <p><a class="anchor" id="section_flags"></a></p>
 <table class="markdownTable">
@@ -156,7 +156,7 @@ section_flags</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>flags</b> (<em>obj</em> <em>section</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>flags</b> (<em>obj</em> <em>section</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md176"></a>
+<h4><a class="anchor" id="autotoc_md177"></a>
 byte_intervals</h4>
 <p><a class="anchor" id="byte_intervals"></a></p>
 <table class="markdownTable">
@@ -169,7 +169,7 @@ byte_intervals</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>byte-intervals</b> (<em>object</em> <em>section</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>byte-intervals</b> (<em>object</em> <em>section</em>)) <em>new-value)</em>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md177"></a>
+<h3><a class="anchor" id="autotoc_md178"></a>
 Find ByteInterval Objects...</h3>
 <p><a class="anchor" id="find-byteinterval-objects..."></a></p>
 <table class="markdownTable">
@@ -183,7 +183,7 @@ Find ByteInterval Objects...</h3>
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>in-address</b> <em>object</em> <em>start-address</em> &amp;optional <em>end-address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>byte-interval</b> objects </td><td class="markdownTableBodyLeft"><b>at-address</b> <em>object</em> <em>address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>byte-interval</b> objects. [*]  </td></tr>
 </table>
 <p>[*] Address range checking is not yet implemented for Common Lisp <b>at-address</b></p>
-<h3><a class="anchor" id="autotoc_md178"></a>
+<h3><a class="anchor" id="autotoc_md179"></a>
 Associated Module</h3>
 <p><a class="anchor" id="associated-module"></a></p>
 <table class="markdownTable">
@@ -196,7 +196,7 @@ Associated Module</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>module</b> (<em>object</em> <em>section</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md179"></a>
+<h2><a class="anchor" id="autotoc_md180"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

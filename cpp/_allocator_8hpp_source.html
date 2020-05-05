@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -330,53 +330,59 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
 <div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="class_specific_bump_ptr_allocator.html#a6fdd189936477d34f492fd3828169d6d">  302</a></span>&#160;  T* <a class="code" href="class_specific_bump_ptr_allocator.html#a6fdd189936477d34f492fd3828169d6d">Allocate</a>(<span class="keywordtype">size_t</span> num = 1) { <span class="keywordflow">return</span> Allocator.<a class="code" href="class_bump_ptr_allocator_impl.html#aa32970944dbbabe4d1fbd3379c4e5fc2">Allocate</a>&lt;T&gt;(num); }</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="keywordtype">void</span> DestroyAll() {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keyword">auto</span> DestroyElements = [](<span class="keywordtype">char</span>* Begin, <span class="keywordtype">char</span>* End) {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      assert(Begin == (<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(Begin, <span class="keyword">alignof</span>(T)));</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">char</span>* Ptr = Begin; Ptr + <span class="keyword">sizeof</span>(T) &lt;= End; Ptr += <span class="keyword">sizeof</span>(T))</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(Ptr)-&gt;~T();</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    };</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> I = Allocator.Slabs.begin(), E = Allocator.Slabs.end(); I != E;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;         ++I) {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordtype">size_t</span> AllocatedSlabSize = BumpPtrAllocator::computeSlabSize(</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;          std::distance(Allocator.Slabs.begin(), I));</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      <span class="keywordtype">char</span>* Begin = (<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(*I, <span class="keyword">alignof</span>(T));</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordtype">char</span>* End = *I == Allocator.Slabs.back() ? Allocator.CurPtr</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                                               : (<span class="keywordtype">char</span>*)*I + AllocatedSlabSize;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      DestroyElements(Begin, End);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; PtrAndSize : Allocator.CustomSizedSlabs) {</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      <span class="keywordtype">void</span>* Ptr = PtrAndSize.first;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordtype">size_t</span> Size = PtrAndSize.second;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      DestroyElements((<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(Ptr, <span class="keyword">alignof</span>(T)), (<span class="keywordtype">char</span>*)Ptr + Size);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    }</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;};</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> SlabSize, <span class="keywordtype">size_t</span> SizeThreshold&gt;</div>
-<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="_allocator_8hpp.html#a1010221a037d9b6cbbe0ecfb54bde794">  335</a></span>&#160;<span class="keywordtype">void</span>* <span class="keyword">operator</span> <span class="keyword">new</span>(<span class="keywordtype">size_t</span> Size,</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                   <a class="code" href="class_bump_ptr_allocator_impl.html">BumpPtrAllocatorImpl&lt;SlabSize, SizeThreshold&gt;</a>&amp; Allocator) {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <span class="keyword">struct </span>S {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    <span class="keywordtype">char</span> c;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      <span class="keywordtype">double</span> D;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">double</span> LD;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">long</span> L;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <span class="keywordtype">void</span>* P;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    } x;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  };</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keywordflow">return</span> Allocator.<a class="code" href="class_bump_ptr_allocator_impl.html#aa32970944dbbabe4d1fbd3379c4e5fc2">Allocate</a>(</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      Size, std::min((<span class="keywordtype">size_t</span>)<a class="code" href="_allocator_8hpp.html#a0968a7354e9fa00d0046519fa0fdfd33">NextPowerOf2</a>(Size), offsetof(S, x)));</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> SlabSize, <span class="keywordtype">size_t</span> SizeThreshold&gt;</div>
-<div class="line"><a name="l00351"></a><span class="lineno"><a class="line" href="_allocator_8hpp.html#a656015fd8a14d4af316a2803338abb7a">  351</a></span>&#160;<span class="keywordtype">void</span> <span class="keyword">operator</span> <span class="keyword">delete</span>(<span class="keywordtype">void</span>*, <a class="code" href="class_bump_ptr_allocator_impl.html">BumpPtrAllocatorImpl&lt;SlabSize, SizeThreshold&gt;</a>&amp;) {}</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="preprocessor">#endif // GTIRB_ALLOCATOR_H</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="comment">// program shutdown time).</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="class_specific_bump_ptr_allocator.html#a198666056a5eec27c8d9412ad92b83a4">  308</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_specific_bump_ptr_allocator.html#a198666056a5eec27c8d9412ad92b83a4">ForgetAllocations</a>() {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    Allocator.Slabs.clear();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    Allocator.CustomSizedSlabs.clear();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">void</span> DestroyAll() {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keyword">auto</span> DestroyElements = [](<span class="keywordtype">char</span>* Begin, <span class="keywordtype">char</span>* End) {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      assert(Begin == (<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(Begin, <span class="keyword">alignof</span>(T)));</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">char</span>* Ptr = Begin; Ptr + <span class="keyword">sizeof</span>(T) &lt;= End; Ptr += <span class="keyword">sizeof</span>(T))</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keyword">reinterpret_cast&lt;</span>T*<span class="keyword">&gt;</span>(Ptr)-&gt;~T();</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    };</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> I = Allocator.Slabs.begin(), E = Allocator.Slabs.end(); I != E;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;         ++I) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;      <span class="keywordtype">size_t</span> AllocatedSlabSize = BumpPtrAllocator::computeSlabSize(</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;          std::distance(Allocator.Slabs.begin(), I));</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      <span class="keywordtype">char</span>* Begin = (<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(*I, <span class="keyword">alignof</span>(T));</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="keywordtype">char</span>* End = *I == Allocator.Slabs.back() ? Allocator.CurPtr</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                                               : (<span class="keywordtype">char</span>*)*I + AllocatedSlabSize;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      DestroyElements(Begin, End);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; PtrAndSize : Allocator.CustomSizedSlabs) {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      <span class="keywordtype">void</span>* Ptr = PtrAndSize.first;</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordtype">size_t</span> Size = PtrAndSize.second;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      DestroyElements((<span class="keywordtype">char</span>*)<a class="code" href="_allocator_8hpp.html#a89af0728d24894f19dd9bd8024f2eeb5">alignAddr</a>(Ptr, <span class="keyword">alignof</span>(T)), (<span class="keywordtype">char</span>*)Ptr + Size);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;};</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> SlabSize, <span class="keywordtype">size_t</span> SizeThreshold&gt;</div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="_allocator_8hpp.html#a1010221a037d9b6cbbe0ecfb54bde794">  344</a></span>&#160;<span class="keywordtype">void</span>* <span class="keyword">operator</span> <span class="keyword">new</span>(<span class="keywordtype">size_t</span> Size,</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                   <a class="code" href="class_bump_ptr_allocator_impl.html">BumpPtrAllocatorImpl&lt;SlabSize, SizeThreshold&gt;</a>&amp; Allocator) {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keyword">struct </span>S {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordtype">char</span> c;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordtype">double</span> D;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">double</span> LD;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="keywordtype">long</span> <span class="keywordtype">long</span> L;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordtype">void</span>* P;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    } x;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  };</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordflow">return</span> Allocator.<a class="code" href="class_bump_ptr_allocator_impl.html#aa32970944dbbabe4d1fbd3379c4e5fc2">Allocate</a>(</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      Size, std::min((<span class="keywordtype">size_t</span>)<a class="code" href="_allocator_8hpp.html#a0968a7354e9fa00d0046519fa0fdfd33">NextPowerOf2</a>(Size), offsetof(S, x)));</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> SlabSize, <span class="keywordtype">size_t</span> SizeThreshold&gt;</div>
+<div class="line"><a name="l00360"></a><span class="lineno"><a class="line" href="_allocator_8hpp.html#a656015fd8a14d4af316a2803338abb7a">  360</a></span>&#160;<span class="keywordtype">void</span> <span class="keyword">operator</span> <span class="keyword">delete</span>(<span class="keywordtype">void</span>*, <a class="code" href="class_bump_ptr_allocator_impl.html">BumpPtrAllocatorImpl&lt;SlabSize, SizeThreshold&gt;</a>&amp;) {}</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#endif // GTIRB_ALLOCATOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_bump_ptr_allocator_impl_html_ae1345f010dbf4bc2d889e6bb47aee4cf"><div class="ttname"><a href="class_bump_ptr_allocator_impl.html#ae1345f010dbf4bc2d889e6bb47aee4cf">BumpPtrAllocatorImpl::setRedZoneSize</a></div><div class="ttdeci">void setRedZoneSize(size_t NewSize)</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:207</div></div>
 <div class="ttc" id="aclass_specific_bump_ptr_allocator_html_aacc63443da9b3d60b8a68b06599e7cdb"><div class="ttname"><a href="class_specific_bump_ptr_allocator.html#aacc63443da9b3d60b8a68b06599e7cdb">SpecificBumpPtrAllocator::SpecificBumpPtrAllocator</a></div><div class="ttdeci">SpecificBumpPtrAllocator(SpecificBumpPtrAllocator &amp;&amp;Old)</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:292</div></div>
@@ -395,6 +401,7 @@ $(function() {
 <div class="ttc" id="aclass_specific_bump_ptr_allocator_html"><div class="ttname"><a href="class_specific_bump_ptr_allocator.html">SpecificBumpPtrAllocator</a></div><div class="ttdef"><b>Definition:</b> Allocator.hpp:283</div></div>
 <div class="ttc" id="aclass_bump_ptr_allocator_impl_html_a858683e1ecd4436a0792f0f9f3de08c4"><div class="ttname"><a href="class_bump_ptr_allocator_impl.html#a858683e1ecd4436a0792f0f9f3de08c4">BumpPtrAllocatorImpl::Deallocate</a></div><div class="ttdeci">void Deallocate(const void *, size_t)</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:190</div></div>
 <div class="ttc" id="aclass_bump_ptr_allocator_impl_html_ab7ce6172de4f300a26d83c5890ec4234"><div class="ttname"><a href="class_bump_ptr_allocator_impl.html#ab7ce6172de4f300a26d83c5890ec4234">BumpPtrAllocatorImpl::~BumpPtrAllocatorImpl</a></div><div class="ttdeci">~BumpPtrAllocatorImpl()</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:101</div></div>
+<div class="ttc" id="aclass_specific_bump_ptr_allocator_html_a198666056a5eec27c8d9412ad92b83a4"><div class="ttname"><a href="class_specific_bump_ptr_allocator.html#a198666056a5eec27c8d9412ad92b83a4">SpecificBumpPtrAllocator::ForgetAllocations</a></div><div class="ttdeci">void ForgetAllocations()</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:308</div></div>
 <div class="ttc" id="aclass_specific_bump_ptr_allocator_html_a14577c182bd8745056454b7b7aaf66a0"><div class="ttname"><a href="class_specific_bump_ptr_allocator.html#a14577c182bd8745056454b7b7aaf66a0">SpecificBumpPtrAllocator::~SpecificBumpPtrAllocator</a></div><div class="ttdeci">~SpecificBumpPtrAllocator()</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:294</div></div>
 <div class="ttc" id="aclass_bump_ptr_allocator_impl_html_a5ed232eb2307056554c458fcd2df66c4"><div class="ttname"><a href="class_bump_ptr_allocator_impl.html#a5ed232eb2307056554c458fcd2df66c4">BumpPtrAllocatorImpl::BumpPtrAllocatorImpl</a></div><div class="ttdeci">BumpPtrAllocatorImpl()=default</div></div>
 <div class="ttc" id="a_allocator_8hpp_html_ab37080b5ed61f1c6c06797b787a96212"><div class="ttname"><a href="_allocator_8hpp.html#ab37080b5ed61f1c6c06797b787a96212">isPowerOf2_64</a></div><div class="ttdeci">constexpr bool isPowerOf2_64(uint64_t Value)</div><div class="ttdoc">Return true if the argument is a power of two &gt; 0 (64 bit edition.)</div><div class="ttdef"><b>Definition:</b> Allocator.hpp:46</div></div>

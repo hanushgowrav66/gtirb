@@ -38,5 +38,6 @@ var menudata={children:[
 {text:"API Components",url:"md__c_o_m_p_o_n_e_n_t_s.html"},
 {text:"API Implementations",url:"usergroup2.html",children:[
 {text:"C++ API",url:"cpp/index.html"},
-{text:"Python API",url:"python/index.html"}]},
+{text:"Python API",url:"python/index.html"},
+{text:"Common Lisp API",url:"cl/index.html"}]},
 {text:"Examples",url:"examples.html"}]}

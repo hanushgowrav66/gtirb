@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,42 +68,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md79">ByteInterval</a><ul><li class="level2"><a href="#autotoc_md80">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md81">API Implementations</a><ul><li class="level3"><a href="#autotoc_md82">ByteInterval Classes</a></li>
-<li class="level3"><a href="#autotoc_md83">blocks</a><ul><li class="level4"><a href="#autotoc_md84">Get and Set</a></li>
-<li class="level4"><a href="#autotoc_md85">ByteBlock operations</a></li>
-<li class="level4"><a href="#autotoc_md86">Find  CodeBlock Objects...</a></li>
-<li class="level4"><a href="#autotoc_md87">Find  DataBlock Objects...</a></li>
+<ul><li class="level1"><a href="#autotoc_md80">ByteInterval</a><ul><li class="level2"><a href="#autotoc_md81">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md82">API Implementations</a><ul><li class="level3"><a href="#autotoc_md83">ByteInterval Classes</a></li>
+<li class="level3"><a href="#autotoc_md84">blocks</a><ul><li class="level4"><a href="#autotoc_md85">Get and Set</a></li>
+<li class="level4"><a href="#autotoc_md86">ByteBlock operations</a></li>
+<li class="level4"><a href="#autotoc_md87">Find  CodeBlock Objects...</a></li>
+<li class="level4"><a href="#autotoc_md88">Find  DataBlock Objects...</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md88">symbolic_expressions</a><ul><li class="level4"><a href="#autotoc_md89">Get and Set</a></li>
-<li class="level4"><a href="#autotoc_md90">Find SymbolicExpression Objects...</a></li>
-<li class="level4"><a href="#autotoc_md91">Other Required SymbolicExpression Operations</a></li>
+<li class="level3"><a href="#autotoc_md89">symbolic_expressions</a><ul><li class="level4"><a href="#autotoc_md90">Get and Set</a></li>
+<li class="level4"><a href="#autotoc_md91">Find SymbolicExpression Objects...</a></li>
+<li class="level4"><a href="#autotoc_md92">Other Required SymbolicExpression Operations</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md92">contents</a><ul><li class="level4"><a href="#autotoc_md93">Get and Set</a></li>
+<li class="level3"><a href="#autotoc_md93">contents</a><ul><li class="level4"><a href="#autotoc_md94">Get and Set</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md94">size</a><ul><li class="level4"><a href="#autotoc_md95">Get and Set</a></li>
+<li class="level3"><a href="#autotoc_md95">size</a><ul><li class="level4"><a href="#autotoc_md96">Get and Set</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md96">address</a><ul><li class="level4"><a href="#autotoc_md97">Get and Set</a></li>
+<li class="level3"><a href="#autotoc_md97">address</a><ul><li class="level4"><a href="#autotoc_md98">Get and Set</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md98">Associated Section</a></li>
+<li class="level3"><a href="#autotoc_md99">Associated Section</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md99">Links</a></li>
+<li class="level2"><a href="#autotoc_md100">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md79"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md80"></a>
 ByteInterval</h1>
 <p><a class="anchor" id="byteinterval"></a></p>
 <p>A <b>ByteInterval</b> represents a named section of a binary.</p>
 <p>The corresponding Protobuf message type is <code>ByteInterval</code>.</p>
-<h2><a class="anchor" id="autotoc_md80"></a>
+<h2><a class="anchor" id="autotoc_md81"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -145,11 +145,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md81"></a>
+<h2><a class="anchor" id="autotoc_md82"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md82"></a>
+<h3><a class="anchor" id="autotoc_md83"></a>
 ByteInterval Classes</h3>
 <p><a class="anchor" id="byteinterval-classes"></a></p>
 <table class="markdownTable">
@@ -162,10 +162,10 @@ ByteInterval Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>byte-interval</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md83"></a>
+<h3><a class="anchor" id="autotoc_md84"></a>
 blocks</h3>
 <p><a class="anchor" id="blocks"></a></p>
-<h4><a class="anchor" id="autotoc_md84"></a>
+<h4><a class="anchor" id="autotoc_md85"></a>
 Get and Set</h4>
 <p><a class="anchor" id="get-and-set"></a></p>
 <table class="markdownTable">
@@ -178,7 +178,7 @@ Get and Set</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>blocks</b> (<em>object</em> <em>byte-interval</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>blocks</b> (<em>object</em> <em>byte-interval</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md85"></a>
+<h4><a class="anchor" id="autotoc_md86"></a>
 ByteBlock operations</h4>
 <p><a class="anchor" id="byteblock-operations"></a></p>
 <table class="markdownTable">
@@ -191,7 +191,7 @@ ByteBlock operations</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft">for all these operations, interact with the blocks through the <b>blocks</b> accessor: each <b>byte-block</b> object stores its own offset. </td><td class="markdownTableBodyLeft">. </td><td class="markdownTableBodyLeft">. </td><td class="markdownTableBodyLeft">.  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md86"></a>
+<h4><a class="anchor" id="autotoc_md87"></a>
 Find  CodeBlock Objects...</h4>
 <p><a class="anchor" id="find--codeblock-objects..."></a></p>
 <table class="markdownTable">
@@ -205,7 +205,7 @@ Find  CodeBlock Objects...</h4>
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>in-address</b> <em>object</em> <em>start-address</em> &amp;optional <em>end-address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>code-block</b> objects </td><td class="markdownTableBodyLeft"><b>at-address</b> <em>object</em> <em>address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>code-block</b> objects. [*]  </td></tr>
 </table>
 <p>[*] Address range checking is not yet implemented for Common Lisp <b>at-address</b></p>
-<h4><a class="anchor" id="autotoc_md87"></a>
+<h4><a class="anchor" id="autotoc_md88"></a>
 Find  DataBlock Objects...</h4>
 <p><a class="anchor" id="find--datablock-objects..."></a></p>
 <table class="markdownTable">
@@ -219,10 +219,10 @@ Find  DataBlock Objects...</h4>
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>in-address</b> <em>object</em> <em>start-address</em> &amp;optional <em>end-address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>data-block</b> objects </td><td class="markdownTableBodyLeft"><b>at-address</b> <em>object</em> <em>address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>data-block</b> objects. [*]  </td></tr>
 </table>
 <p>[*] Address range checking is not yet implemented for Common Lisp <b>at-address</b></p>
-<h3><a class="anchor" id="autotoc_md88"></a>
+<h3><a class="anchor" id="autotoc_md89"></a>
 symbolic_expressions</h3>
 <p><a class="anchor" id="symbolic_expressions"></a></p>
-<h4><a class="anchor" id="autotoc_md89"></a>
+<h4><a class="anchor" id="autotoc_md90"></a>
 Get and Set</h4>
 <p><a class="anchor" id="get-and-set"></a></p>
 <table class="markdownTable">
@@ -235,7 +235,7 @@ Get and Set</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>symbolic-expressions</b> (<em>object</em> <em>byte-interval</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>symbolic-expressions</b> (<em>object</em> <em>byte-interval</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md90"></a>
+<h4><a class="anchor" id="autotoc_md91"></a>
 Find SymbolicExpression Objects...</h4>
 <p><a class="anchor" id="find-symbolicexpression-objects..."></a></p>
 <table class="markdownTable">
@@ -249,7 +249,7 @@ Find SymbolicExpression Objects...</h4>
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>at-address</b> <em>object</em> <em>address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the symbolic expression objects. [*]  </td></tr>
 </table>
 <p>[*] Address range checking is not yet implemented for Common Lisp <b>at-address</b></p>
-<h4><a class="anchor" id="autotoc_md91"></a>
+<h4><a class="anchor" id="autotoc_md92"></a>
 Other Required SymbolicExpression Operations</h4>
 <p><a class="anchor" id="other-required-symbolicexpression-operations"></a></p>
 <table class="markdownTable">
@@ -262,10 +262,10 @@ Other Required SymbolicExpression Operations</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft">for all these operations, interact with the SymbolicExpression objects through the <b>symbolic-expressions</b> accessor: <b>symbolic-expression</b> hashes are keyed by offset. </td><td class="markdownTableBodyLeft">. </td><td class="markdownTableBodyLeft">. </td><td class="markdownTableBodyLeft">.  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md92"></a>
+<h3><a class="anchor" id="autotoc_md93"></a>
 contents</h3>
 <p><a class="anchor" id="contents"></a></p>
-<h4><a class="anchor" id="autotoc_md93"></a>
+<h4><a class="anchor" id="autotoc_md94"></a>
 Get and Set</h4>
 <p><a class="anchor" id="get-and-set"></a></p>
 <table class="markdownTable">
@@ -278,10 +278,10 @@ Get and Set</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>contents</b> (<em>obj</em> <em>byte-interval</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>contents</b> (<em>obj</em> <em>byte-interval</em>)) <em>new</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md94"></a>
+<h3><a class="anchor" id="autotoc_md95"></a>
 size</h3>
 <p><a class="anchor" id="size"></a></p>
-<h4><a class="anchor" id="autotoc_md95"></a>
+<h4><a class="anchor" id="autotoc_md96"></a>
 Get and Set</h4>
 <p><a class="anchor" id="get-and-set"></a></p>
 <table class="markdownTable">
@@ -294,10 +294,10 @@ Get and Set</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>size</b> (<em>obj</em> <em>byte-interval</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>size</b> (<em>obj</em> <em>byte-interval</em>)) <em>new</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md96"></a>
+<h3><a class="anchor" id="autotoc_md97"></a>
 address</h3>
 <p><a class="anchor" id="address"></a></p>
-<h4><a class="anchor" id="autotoc_md97"></a>
+<h4><a class="anchor" id="autotoc_md98"></a>
 Get and Set</h4>
 <p><a class="anchor" id="get-and-set"></a></p>
 <table class="markdownTable">
@@ -310,7 +310,7 @@ Get and Set</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>address</b> (<em>obj</em> <em>byte-interval</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>address</b> (<em>obj</em> <em>byte-interval</em>)) <em>new</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md98"></a>
+<h3><a class="anchor" id="autotoc_md99"></a>
 Associated Section</h3>
 <p><a class="anchor" id="associated-section"></a></p>
 <table class="markdownTable">
@@ -323,7 +323,7 @@ Associated Section</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>section</b> (<em>object</em> <em>byte-interval</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md99"></a>
+<h2><a class="anchor" id="autotoc_md100"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

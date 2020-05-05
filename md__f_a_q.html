@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,28 +68,28 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><ul><li class="level2"><a href="#autotoc_md16">Frequently Asked Questions</a><ul><ul><li class="level4"><a href="#autotoc_md17">Compiler Errors</a></li>
-<li class="level4"><a href="#autotoc_md18">Linking error with &quot;undefined reference&quot; to gtirb</a></li>
+<ul><ul><li class="level2"><a href="#autotoc_md17">Frequently Asked Questions</a><ul><ul><li class="level4"><a href="#autotoc_md18">Compiler Errors</a></li>
+<li class="level4"><a href="#autotoc_md19">Linking error with &quot;undefined reference&quot; to gtirb</a></li>
 </ul>
 </ul>
 </li>
 </ul>
 </ul>
 </div>
-<div class="textblock"><h2><a class="anchor" id="autotoc_md16"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md17"></a>
 Frequently Asked Questions</h2>
 <p><a class="anchor" id="frequently-asked-questions"></a></p>
 <ul>
 <li><a href="#compiler-errors">I get compiler errors when I try to compile programs using GTIRB. How can I make them go away?</a></li>
 <li><a href="#linking-error-with-undefined-reference-to-gtirb">Linking error with "undefined reference" to gtirb::</a></li>
 </ul>
-<h4><a class="anchor" id="autotoc_md17"></a>
+<h4><a class="anchor" id="autotoc_md18"></a>
 Compiler Errors</h4>
 <p><a class="anchor" id="compiler-errors"></a></p>
 <p><b>Q: I get compiler errors when I try to compile programs using GTIRB. How can I make them go away?</b></p>
 <p>A: GTIRB requires C++17, including the C++17 standard library. If your compiler does not use C++17 by default, you will need to explicitly specify it when compiling programs that use GTIRB.</p>
 <p>For example: </p><div class="fragment"><div class="line">g++ --std=c++17 my_gtirb_program.cpp -lgtirb -o my_gtirb_program</div>
-</div><!-- fragment --><h4><a class="anchor" id="autotoc_md18"></a>
+</div><!-- fragment --><h4><a class="anchor" id="autotoc_md19"></a>
 Linking error with "undefined reference" to gtirb</h4>
 <p><a class="anchor" id="linking-error-with-undefined-reference-to-gtirb"></a></p>
 <p><b>Q: I get linker errors when I try to compile and link programs using GTIRB. How can I make them go away?</b></p>

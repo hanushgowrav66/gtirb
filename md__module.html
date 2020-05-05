@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,35 +68,35 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md141">Module</a><ul><li class="level2"><a href="#autotoc_md142">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md143">API Implementations</a><ul><li class="level3"><a href="#autotoc_md144">Module Classes and AuxDataContainer functionality</a></li>
-<li class="level3"><a href="#autotoc_md145">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md146">binary_path</a></li>
-<li class="level4"><a href="#autotoc_md147">preferred_addr</a></li>
-<li class="level4"><a href="#autotoc_md148">rebase_delta</a></li>
-<li class="level4"><a href="#autotoc_md149">file_format</a></li>
-<li class="level4"><a href="#autotoc_md150">isa</a></li>
-<li class="level4"><a href="#autotoc_md151">name</a></li>
-<li class="level4"><a href="#autotoc_md152">sections</a></li>
-<li class="level4"><a href="#autotoc_md153">symbols</a></li>
-<li class="level4"><a href="#autotoc_md154">proxy_blocks</a></li>
-<li class="level4"><a href="#autotoc_md155">entry_point</a></li>
+<ul><li class="level1"><a href="#autotoc_md142">Module</a><ul><li class="level2"><a href="#autotoc_md143">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md144">API Implementations</a><ul><li class="level3"><a href="#autotoc_md145">Module Classes and AuxDataContainer functionality</a></li>
+<li class="level3"><a href="#autotoc_md146">Required Field Getters/Setters</a><ul><li class="level4"><a href="#autotoc_md147">binary_path</a></li>
+<li class="level4"><a href="#autotoc_md148">preferred_addr</a></li>
+<li class="level4"><a href="#autotoc_md149">rebase_delta</a></li>
+<li class="level4"><a href="#autotoc_md150">file_format</a></li>
+<li class="level4"><a href="#autotoc_md151">isa</a></li>
+<li class="level4"><a href="#autotoc_md152">name</a></li>
+<li class="level4"><a href="#autotoc_md153">sections</a></li>
+<li class="level4"><a href="#autotoc_md154">symbols</a></li>
+<li class="level4"><a href="#autotoc_md155">proxy_blocks</a></li>
+<li class="level4"><a href="#autotoc_md156">entry_point</a></li>
 </ul>
 </li>
-<li class="level3"><a href="#autotoc_md156">Associated IR</a></li>
-<li class="level3"><a href="#autotoc_md157">Find Section Objects...</a></li>
+<li class="level3"><a href="#autotoc_md157">Associated IR</a></li>
+<li class="level3"><a href="#autotoc_md158">Find Section Objects...</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md158">Links</a></li>
+<li class="level2"><a href="#autotoc_md159">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md141"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md142"></a>
 Module</h1>
 <p><a class="anchor" id="module"></a></p>
 <p>A <b>Module</b> represents a single binary (library or executable).</p>
 <p>The corresponding Protobuf message type is <code>Module</code>.</p>
-<h2><a class="anchor" id="autotoc_md142"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -128,11 +128,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md143"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md144"></a>
+<h3><a class="anchor" id="autotoc_md145"></a>
 Module Classes and AuxDataContainer functionality</h3>
 <p><a class="anchor" id="module-classes-and-auxdatacontainer-functionality"></a></p>
 <table class="markdownTable">
@@ -145,10 +145,10 @@ Module Classes and AuxDataContainer functionality</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>module</b> </td><td class="markdownTableBodyLeft">via <b>aux-data</b> class and specializations <b>aux-data</b> (<em>object</em> <em>module</em>) =&gt; <em>result</em>, (setf (<b>aux-data</b> (<em>object</em> <em>module</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md145"></a>
+<h3><a class="anchor" id="autotoc_md146"></a>
 Required Field Getters/Setters</h3>
 <p><a class="anchor" id="required-field-getterssetters"></a></p>
-<h4><a class="anchor" id="autotoc_md146"></a>
+<h4><a class="anchor" id="autotoc_md147"></a>
 binary_path</h4>
 <p><a class="anchor" id="binary_path"></a></p>
 <table class="markdownTable">
@@ -161,7 +161,7 @@ binary_path</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>binary-path</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>binary-path</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md147"></a>
+<h4><a class="anchor" id="autotoc_md148"></a>
 preferred_addr</h4>
 <p><a class="anchor" id="preferred_addr"></a></p>
 <table class="markdownTable">
@@ -174,7 +174,7 @@ preferred_addr</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>preferred-addr</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>preferred-addr</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md148"></a>
+<h4><a class="anchor" id="autotoc_md149"></a>
 rebase_delta</h4>
 <p><a class="anchor" id="rebase_delta"></a></p>
 <table class="markdownTable">
@@ -187,7 +187,7 @@ rebase_delta</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>rebase-delta</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>rebase-delta</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md149"></a>
+<h4><a class="anchor" id="autotoc_md150"></a>
 file_format</h4>
 <p><a class="anchor" id="file_format"></a></p>
 <table class="markdownTable">
@@ -200,7 +200,7 @@ file_format</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>file-format</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>file-format</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md150"></a>
+<h4><a class="anchor" id="autotoc_md151"></a>
 isa</h4>
 <p><a class="anchor" id="isa"></a></p>
 <table class="markdownTable">
@@ -213,7 +213,7 @@ isa</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>isa</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>isa</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md151"></a>
+<h4><a class="anchor" id="autotoc_md152"></a>
 name</h4>
 <p><a class="anchor" id="name"></a></p>
 <table class="markdownTable">
@@ -226,7 +226,7 @@ name</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>name</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>name</b> (<em>obj</em> <em>module</em>)) <em>new</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md152"></a>
+<h4><a class="anchor" id="autotoc_md153"></a>
 sections</h4>
 <p><a class="anchor" id="sections"></a></p>
 <table class="markdownTable">
@@ -239,7 +239,7 @@ sections</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>sections</b> (<em>object</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>sections</b> (<em>object</em> <em>module</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md153"></a>
+<h4><a class="anchor" id="autotoc_md154"></a>
 symbols</h4>
 <p><a class="anchor" id="symbols"></a></p>
 <table class="markdownTable">
@@ -252,7 +252,7 @@ symbols</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>symbols</b> (<em>object</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>symbols</b> (<em>object</em> <em>module</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md154"></a>
+<h4><a class="anchor" id="autotoc_md155"></a>
 proxy_blocks</h4>
 <p><a class="anchor" id="proxy_blocks"></a></p>
 <table class="markdownTable">
@@ -265,7 +265,7 @@ proxy_blocks</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>proxies</b> (<em>object</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>proxies</b> (<em>object</em> <em>module</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md155"></a>
+<h4><a class="anchor" id="autotoc_md156"></a>
 entry_point</h4>
 <p><a class="anchor" id="entry_point"></a></p>
 <table class="markdownTable">
@@ -278,7 +278,7 @@ entry_point</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>entry-point</b> (<em>obj</em> <em>module</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">setf (<b>entry-point</b> (<em>obj</em> <em>module</em>)) <em>new-value</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md156"></a>
+<h3><a class="anchor" id="autotoc_md157"></a>
 Associated IR</h3>
 <p><a class="anchor" id="associated-ir"></a></p>
 <table class="markdownTable">
@@ -291,7 +291,7 @@ Associated IR</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>gtirb</b> (<em>object</em> <em>module</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md157"></a>
+<h3><a class="anchor" id="autotoc_md158"></a>
 Find Section Objects...</h3>
 <p><a class="anchor" id="find-section-objects..."></a></p>
 <table class="markdownTable">
@@ -305,7 +305,7 @@ Find Section Objects...</h3>
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>in-address</b> <em>object</em> <em>start-address</em> &amp;optional <em>end-address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>section</b> objects </td><td class="markdownTableBodyLeft"><b>at-address</b> <em>object</em> <em>address</em> =&gt; <em>result</em>, then filter <em>result</em> to extract the <b>section</b> objects. [*]  </td></tr>
 </table>
 <p>[*] Address range checking is not yet implemented for Common Lisp <b>at-address</b></p>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md159"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

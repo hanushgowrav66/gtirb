@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.5.0</span>
+   &#160;<span id="projectnumber">v1.6.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,26 +68,26 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md69">ByteBlock</a><ul><li class="level2"><a href="#autotoc_md70">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md71">API Implementations</a><ul><li class="level3"><a href="#autotoc_md72">ByteBlock Classes</a></li>
-<li class="level3"><a href="#autotoc_md73">Size Getters/Setters</a></li>
-<li class="level3"><a href="#autotoc_md74">Associated ByteInterval</a><ul><li class="level4"><a href="#autotoc_md75">Get Associated ByteInterval</a></li>
-<li class="level4"><a href="#autotoc_md76">ByteBlock Offset in Associated ByteInterval</a></li>
-<li class="level4"><a href="#autotoc_md77">ByteBlock Address</a></li>
+<ul><li class="level1"><a href="#autotoc_md70">ByteBlock</a><ul><li class="level2"><a href="#autotoc_md71">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md72">API Implementations</a><ul><li class="level3"><a href="#autotoc_md73">ByteBlock Classes</a></li>
+<li class="level3"><a href="#autotoc_md74">Size Getters/Setters</a></li>
+<li class="level3"><a href="#autotoc_md75">Associated ByteInterval</a><ul><li class="level4"><a href="#autotoc_md76">Get Associated ByteInterval</a></li>
+<li class="level4"><a href="#autotoc_md77">ByteBlock Offset in Associated ByteInterval</a></li>
+<li class="level4"><a href="#autotoc_md78">ByteBlock Address</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md78">Links</a></li>
+<li class="level2"><a href="#autotoc_md79">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md69"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md70"></a>
 ByteBlock</h1>
 <p><a class="anchor" id="byteblock"></a></p>
 <p><b>ByteBlock</b> is the base class for blocks that belong to a <a class="el" href="md__byte_interval.html">ByteInterval</a> and store their bytes there.</p>
-<h2><a class="anchor" id="autotoc_md70"></a>
+<h2><a class="anchor" id="autotoc_md71"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -100,11 +100,11 @@ Guaranteed Properties</h2>
 <li>If a <b>ByteBlock</b> belongs to a <b>ByteInterval</b> then it must be able to retrieve its offset in the <b>ByteInterval</b>.</li>
 <li>If a <b>ByteBlock</b> belongs to a <b>ByteInterval</b> that has an address then it must be able to retrieve its address, calculated as the <b>ByteInterval</b> address plus the <b>ByteBlock</b> offset.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md71"></a>
+<h2><a class="anchor" id="autotoc_md72"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md72"></a>
+<h3><a class="anchor" id="autotoc_md73"></a>
 ByteBlock Classes</h3>
 <p><a class="anchor" id="byteblock-classes"></a></p>
 <table class="markdownTable">
@@ -117,7 +117,7 @@ ByteBlock Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>gtirb-byte-block</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md73"></a>
+<h3><a class="anchor" id="autotoc_md74"></a>
 Size Getters/Setters</h3>
 <p><a class="anchor" id="size-getterssetters"></a></p>
 <table class="markdownTable">
@@ -130,10 +130,10 @@ Size Getters/Setters</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>size</b> (<em>obj</em> <em>code-block</em>) =&gt; <em>result</em>, <b>size</b> (<em>obj</em> <em>data-block</em>) =&gt; <em>result</em> </td><td class="markdownTableBodyLeft">(setf (<b>size</b> (<em>obj</em> <em>code-block</em>)) <em>new</em>), (setf (<b>size</b> (<em>obj</em> <em>data-block</em>)) <em>new</em>)  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md74"></a>
+<h3><a class="anchor" id="autotoc_md75"></a>
 Associated ByteInterval</h3>
 <p><a class="anchor" id="associated-byteinterval"></a></p>
-<h4><a class="anchor" id="autotoc_md75"></a>
+<h4><a class="anchor" id="autotoc_md76"></a>
 Get Associated ByteInterval</h4>
 <p><a class="anchor" id="get-associated-byteinterval"></a></p>
 <table class="markdownTable">
@@ -146,7 +146,7 @@ Get Associated ByteInterval</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>byte-interval</b> (<em>object</em> <em>code-block</em>) =&gt; <em>result</em>, <b>byte-interval</b> (<em>object</em> <em>data-block</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md76"></a>
+<h4><a class="anchor" id="autotoc_md77"></a>
 ByteBlock Offset in Associated ByteInterval</h4>
 <p><a class="anchor" id="byteblock-offset-in-associated-byteinterval"></a></p>
 <table class="markdownTable">
@@ -159,7 +159,7 @@ ByteBlock Offset in Associated ByteInterval</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>offset</b> (<em>obj</em> <em>code-block</em>) =&gt; <em>result</em>, <b>offset</b> (<em>obj</em> <em>data-block</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h4><a class="anchor" id="autotoc_md77"></a>
+<h4><a class="anchor" id="autotoc_md78"></a>
 ByteBlock Address</h4>
 <p><a class="anchor" id="byteblock-address"></a></p>
 <table class="markdownTable">
@@ -172,7 +172,7 @@ ByteBlock Address</h4>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>address</b> <em>obj</em> =&gt; <em>result</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md78"></a>
+<h2><a class="anchor" id="autotoc_md79"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>
