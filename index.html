@@ -130,9 +130,9 @@ Installing</h1>
 <p><a class="anchor" id="installing"></a> Packages currently existing for easily installing GTIRB (and attendant tooling including the <a href="https://github.com/GrammaTech/ddisasm">ddisasm</a> disassembler and <a href="https://github.com/GrammaTech/gtirb-pprinter">gtirb-pprinter</a> pretty printer) on Windows, Ubuntu, and Arch Linux. See below for instructions.</p>
 <h2><a class="anchor" id="autotoc_md7"></a>
 Windows</h2>
-<p><a class="anchor" id="windows"></a> Pre-built binaries are available for Windows. They can be downloaded from:</p><ul>
-<li><a href="https://grammatech.github.io/gtirb/pkgs/windows-debug/">https://grammatech.github.io/gtirb/pkgs/windows-debug/</a></li>
-<li><a href="https://grammatech.github.io/gtirb/pkgs/windows-release/">https://grammatech.github.io/gtirb/pkgs/windows-release/</a></li>
+<p><a class="anchor" id="windows"></a> Pre-built binaries and symbol (<code>.pdb</code>) files are available for Windows. Debug and release builds are available at:</p><ul>
+<li><a href="https://download.grammatech.com/gtirb/files/windows-debug/">https://download.grammatech.com/gtirb/files/windows-debug/</a></li>
+<li><a href="https://download.grammatech.com/gtirb/files/windows-release/">https://download.grammatech.com/gtirb/files/windows-release/</a></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md8"></a>
 Ubuntu</h2>
@@ -159,7 +159,7 @@ Arch Linux</h2>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md12"></a>
 Building</h1>
 <p><a class="anchor" id="building"></a></p>
-<p>GTIRB should successfully build in 64-bits with GCC, Clang, and Visual Studio compilers supporting at least C++17. GTIRB uses CMake which must be installed with at least version 3.10.</p>
+<p>GTIRB's C++ API should successfully build in 64-bits with GCC, Clang, and Visual Studio compilers supporting at least C++17. GTIRB uses CMake which must be installed with at least version 3.10.</p>
 <p>The common build process looks like this: </p><div class="fragment"><div class="line">mkdir build</div>
 <div class="line">cd build</div>
 <div class="line"># Note: You may wish to add some -D arguments to the next command. See below.</div>
