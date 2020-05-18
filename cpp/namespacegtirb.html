@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.6.1</span>
+   &#160;<span id="projectnumber">v1.7.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -107,6 +107,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_data_block.html">DataBlock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a data object, possibly symbolic.  <a href="classgtirb_1_1_data_block.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_error_or.html">ErrorOr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_i_r.html">IR</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A complete internal representation consisting of Modules (<a class="el" href="classgtirb_1_1_module.html">Module</a>).  <a href="classgtirb_1_1_i_r.html#details">More...</a><br /></td></tr>
@@ -270,12 +272,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4c9fe2e2a58dcd46130c6ae15df7578e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::optional&lt; CFG::vertex_descriptor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga4c9fe2e2a58dcd46130c6ae15df7578e">getVertex</a> (const <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, const <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga4c9fe2e2a58dcd46130c6ae15df7578e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the boost::graph vertex descriptor for a <a class="el" href="classgtirb_1_1_cfg_node.html" title="Represents the base of types that can be inserted into the CFG.">CfgNode</a> if it is in the graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga4c9fe2e2a58dcd46130c6ae15df7578e">More...</a><br /></td></tr>
 <tr class="separator:ga4c9fe2e2a58dcd46130c6ae15df7578e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f969d154b011e48b09eb4ce1eeae884"><td class="memItemLeft" align="right" valign="top">const std::error_category &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a8f969d154b011e48b09eb4ce1eeae884">loadErrorCategory</a> ()</td></tr>
+<tr class="memdesc:a8f969d154b011e48b09eb4ce1eeae884"><td class="mdescLeft">&#160;</td><td class="mdescRight">The error category used to represent load failures.  <a href="namespacegtirb.html#a8f969d154b011e48b09eb4ce1eeae884">More...</a><br /></td></tr>
+<tr class="separator:a8f969d154b011e48b09eb4ce1eeae884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea4e694daae2fecc97b784fb1da2773"><td class="memItemLeft" align="right" valign="top">std::error_code&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#afea4e694daae2fecc97b784fb1da2773">make_error_code</a> (<a class="el" href="classgtirb_1_1_i_r.html#a97815f1ff3416a2f4a93f7103e2ec5c5">gtirb::IR::load_error</a> e)</td></tr>
+<tr class="memdesc:afea4e694daae2fecc97b784fb1da2773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an std::error_code object from an <a class="el" href="classgtirb_1_1_i_r.html#a97815f1ff3416a2f4a93f7103e2ec5c5">IR::load_error</a> object.  <a href="namespacegtirb.html#afea4e694daae2fecc97b784fb1da2773">More...</a><br /></td></tr>
+<tr class="separator:afea4e694daae2fecc97b784fb1da2773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1ddb48e391dc9e66bbc04c2fb1efa3b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> boost::iterator_range&lt; <a class="el" href="group___c_f_g___g_r_o_u_p.html#gaffefa370de62d4fb03aaf46df16a5d0c">cfg_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga1ddb48e391dc9e66bbc04c2fb1efa3b7">nodes</a> (<a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga1ddb48e391dc9e66bbc04c2fb1efa3b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a range of the <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> elements in the specified graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga1ddb48e391dc9e66bbc04c2fb1efa3b7">More...</a><br /></td></tr>
 <tr class="separator:ga1ddb48e391dc9e66bbc04c2fb1efa3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> boost::iterator_range&lt; <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga2db32369fb14f7f7f70c843f9ff0adbb">const_cfg_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaa6b3315d77e438da3f4f6a53c89df6a0">nodes</a> (const <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant range of the <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> elements in the specified graph.  <a href="group___c_f_g___g_r_o_u_p.html#gaa6b3315d77e438da3f4f6a53c89df6a0">More...</a><br /></td></tr>
 <tr class="separator:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memTemplParams" colspan="2">template&lt;class T , class E &gt; </td></tr>
+<tr class="memitem:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_error_code_enum&lt; E &gt;::value||std::is_error_condition_enum&lt; E &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a31c5464f9284c4eca4d83dc4eb94073c">operator==</a> (const <a class="el" href="classgtirb_1_1_error_or.html">ErrorOr</a>&lt; T &gt; &amp;Err, E Code)</td></tr>
+<tr class="separator:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">removeVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node from the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">More...</a><br /></td></tr>
 <tr class="separator:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,6 +528,85 @@ template&lt;&gt; </div>
           <td></td>
           <td class="paramtype">Kind&#160;</td>
           <td class="paramname"><em>knd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f969d154b011e48b09eb4ce1eeae884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f969d154b011e48b09eb4ce1eeae884">&#9670;&nbsp;</a></span>loadErrorCategory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::error_category&amp; gtirb::loadErrorCategory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The error category used to represent load failures. </p>
+<dl class="section return"><dt>Returns</dt><dd>The load failure error category. </dd></dl>
+
+</div>
+</div>
+<a id="afea4e694daae2fecc97b784fb1da2773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea4e694daae2fecc97b784fb1da2773">&#9670;&nbsp;</a></span>make_error_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::error_code gtirb::make_error_code </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgtirb_1_1_i_r.html#a97815f1ff3416a2f4a93f7103e2ec5c5">gtirb::IR::load_error</a>&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Makes an std::error_code object from an <a class="el" href="classgtirb_1_1_i_r.html#a97815f1ff3416a2f4a93f7103e2ec5c5">IR::load_error</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The error code. </dd></dl>
+
+</div>
+</div>
+<a id="a31c5464f9284c4eca4d83dc4eb94073c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31c5464f9284c4eca4d83dc4eb94073c">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , class E &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt;std::is_error_code_enum&lt;E&gt;::value || std::is_error_condition_enum&lt;E&gt;::value, bool&gt; gtirb::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgtirb_1_1_error_or.html">ErrorOr</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname"><em>Code</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

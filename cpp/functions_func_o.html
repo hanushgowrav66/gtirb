@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.6.1</span>
+   &#160;<span id="projectnumber">v1.7.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -69,6 +69,9 @@ $(function() {
 <li>Offset()
 : <a class="el" href="structgtirb_1_1_offset.html#a98e3cc96dfef0f391a9535dafc78b3a2">gtirb::Offset</a>
 </li>
+<li>operator bool()
+: <a class="el" href="classgtirb_1_1_error_or.html#ad9a4d330bcbab44b8a7f5e0cf97e6549">gtirb::ErrorOr&lt; T &gt;</a>
+</li>
 <li>operator value_type()
 : <a class="el" href="classgtirb_1_1_addr.html#ad863fc09b23cfb8c69281694f321e019">gtirb::Addr</a>
 </li>
@@ -83,6 +86,9 @@ $(function() {
 , <a class="el" href="structstd_1_1hash_3_01gtirb_1_1_sym_addr_const_01_4.html#a12f33b9b492928cb86a74bd3c1f75690">std::hash&lt; gtirb::SymAddrConst &gt;</a>
 , <a class="el" href="structstd_1_1hash_3_01gtirb_1_1_sym_stack_const_01_4.html#ace419fecc3ac74b6c358dc73b979b671">std::hash&lt; gtirb::SymStackConst &gt;</a>
 , <a class="el" href="structstd_1_1hash_3_1_1gtirb_1_1_u_u_i_d_01_4.html#a937dc6d99b726ab842aca4ebeb9eb6e1">std::hash&lt;::gtirb::UUID &gt;</a>
+</li>
+<li>operator*()
+: <a class="el" href="classgtirb_1_1_error_or.html#aae2951f05068cd0f6104325aba752445">gtirb::ErrorOr&lt; T &gt;</a>
 </li>
 <li>operator+()
 : <a class="el" href="classgtirb_1_1_addr.html#aa824ea9a76184b4dce61633a71b66280">gtirb::Addr</a>
@@ -99,11 +105,15 @@ $(function() {
 <li>operator-=()
 : <a class="el" href="classgtirb_1_1_addr.html#af3a0d4c6ee0218311b1f67b40b97b540">gtirb::Addr</a>
 </li>
+<li>operator-&gt;()
+: <a class="el" href="classgtirb_1_1_error_or.html#ac814dc207354b9dc4d431b4621dc57b4">gtirb::ErrorOr&lt; T &gt;</a>
+</li>
 <li>operator&lt;&lt;()
 : <a class="el" href="classgtirb_1_1_addr.html#a105f5f1d1e9f2e2719c1d81e40d8a77b">gtirb::Addr</a>
 </li>
 <li>operator=()
 : <a class="el" href="class_bump_ptr_allocator_impl.html#a53b0e553fe863d895eb105c32310e60a">BumpPtrAllocatorImpl&lt; SlabSize, SizeThreshold &gt;</a>
+, <a class="el" href="classgtirb_1_1_error_or.html#ae8102ba9dc4856528069d20d3808fe1b">gtirb::ErrorOr&lt; T &gt;</a>
 , <a class="el" href="classgtirb_1_1_node.html#ada843ff6ad535a3f82650a4f580255e3">gtirb::Node</a>
 , <a class="el" href="class_specific_bump_ptr_allocator.html#a06b325df8de78f41303460b9a9fc0cb6">SpecificBumpPtrAllocator&lt; T &gt;</a>
 </li>

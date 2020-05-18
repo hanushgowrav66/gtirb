@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_880',['Node',['../../html/cpp/classgtirb_1_1_byte_interval.html#a6db9d28bd448a131448276ee03de1e6d',1,'gtirb::ByteInterval::Node()'],['../../html/cpp/classgtirb_1_1_context.html#a6db9d28bd448a131448276ee03de1e6d',1,'gtirb::Context::Node()'],['../../html/cpp/classgtirb_1_1_i_r.html#a6db9d28bd448a131448276ee03de1e6d',1,'gtirb::IR::Node()'],['../../html/cpp/classgtirb_1_1_module.html#a6db9d28bd448a131448276ee03de1e6d',1,'gtirb::Module::Node()'],['../../html/cpp/classgtirb_1_1_section.html#a6db9d28bd448a131448276ee03de1e6d',1,'gtirb::Section::Node()']]]
+  ['module_915',['Module',['../../html/cpp/classgtirb_1_1_byte_interval.html#a21f639900c480510650969df9c74d17d',1,'gtirb::ByteInterval::Module()'],['../../html/cpp/classgtirb_1_1_proxy_block.html#a21f639900c480510650969df9c74d17d',1,'gtirb::ProxyBlock::Module()'],['../../html/cpp/classgtirb_1_1_section.html#a21f639900c480510650969df9c74d17d',1,'gtirb::Section::Module()'],['../../html/cpp/classgtirb_1_1_symbol.html#a21f639900c480510650969df9c74d17d',1,'gtirb::Symbol::Module()']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.6.1</span>
+   &#160;<span id="projectnumber">v1.7.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -139,13 +139,16 @@ $(function() {
 <div class="line">  <a name="_a3"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_context.html">Context</a> C;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Load the IR</span></div>
-<div class="line">  <a name="_a4"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html">IR</a>* I;</div>
+<div class="line">  <a name="_a4"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html">IR</a>* I = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
-<div class="line">  assert(argc == 4);</div>
-<div class="line">  {</div>
+<div class="line">  <span class="keywordflow">if</span> (argc == 4) {</div>
 <div class="line">    std::ifstream in(argv[1]);</div>
-<div class="line">    I = <a name="a5"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html#ad6e4950f04b44e841b6fa150bbd5944d">IR::load</a>(C, in);</div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> IoE = <a name="a5"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html#a3eb7d2a745085cd7c7ed37845ef57028">IR::load</a>(C, in); IoE)</div>
+<div class="line">      I = *IoE;</div>
 <div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (!I)</div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Addresses of source and target blocks</span></div>
 <div class="line">  <a class="codeRef" href="../html/cpp/classgtirb_1_1_addr.html">Addr</a> Source(std::stoul(argv[2], <span class="keyword">nullptr</span>, 16));</div>
@@ -160,25 +163,27 @@ $(function() {
 <div class="line">    SourceBlock = &amp;*Range.begin();</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
 <div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;No block at source address &quot;</span> &lt;&lt; Source &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line">    exit(1);</div>
+<div class="line">    exit(EXIT_FAILURE);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (<span class="keyword">auto</span> Range = Mod.findCodeBlocksAt(Target); !Range.empty()) {</div>
 <div class="line">    TargetBlock = &amp;*Range.begin();</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
 <div class="line">    std::cerr &lt;&lt; <span class="stringliteral">&quot;No block at target address &quot;</span> &lt;&lt; Target &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line">    exit(1);</div>
+<div class="line">    exit(EXIT_FAILURE);</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  std::cout &lt;&lt; <span class="stringliteral">&quot;Paths from &quot;</span> &lt;&lt; SourceBlock-&gt;<a name="a8"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_code_block.html#ae4b422fc7b8432677c0ba0fde33064f7">getAddress</a>() &lt;&lt; <span class="stringliteral">&quot; to &quot;</span></div>
 <div class="line">            &lt;&lt; TargetBlock-&gt;<a class="codeRef" href="../html/cpp/classgtirb_1_1_code_block.html#ae4b422fc7b8432677c0ba0fde33064f7">getAddress</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">  <span class="comment">// Print paths</span></div>
 <div class="line">  PrintPathsVisitor(Cfg, *TargetBlock).visit(*<a class="codeRef" href="../html/cpp/group___c_f_g___g_r_o_u_p.html#ga4c9fe2e2a58dcd46130c6ae15df7578e">getVertex</a>(SourceBlock, Cfg));</div>
+<div class="line">  <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aclassgtirb_1_1_code_block_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_code_block.html">gtirb::CodeBlock</a></div></div>
 <div class="ttc" id="aclassgtirb_1_1_addr_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_addr.html">gtirb::Addr</a></div></div>
 <div class="ttc" id="agroup___c_f_g___g_r_o_u_p_html_ga4c9fe2e2a58dcd46130c6ae15df7578e"><div class="ttname"><a href="../html/cpp/group___c_f_g___g_r_o_u_p.html#ga4c9fe2e2a58dcd46130c6ae15df7578e">gtirb::getVertex</a></div><div class="ttdeci">GTIRB_EXPORT_API std::optional&lt; CFG::vertex_descriptor &gt; getVertex(const CfgNode *N, const CFG &amp;Cfg)</div></div>
+<div class="ttc" id="aclassgtirb_1_1_i_r_html_a3eb7d2a745085cd7c7ed37845ef57028"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#a3eb7d2a745085cd7c7ed37845ef57028">gtirb::IR::load</a></div><div class="ttdeci">static ErrorOr&lt; IR * &gt; load(Context &amp;C, std::istream &amp;In)</div></div>
 <div class="ttc" id="aclassgtirb_1_1_context_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_context.html">gtirb::Context</a></div></div>
 <div class="ttc" id="agtirb_8hpp.html_html"><div class="ttname"><a href="../html/cpp/gtirb_8hpp.html">gtirb.hpp</a></div></div>
 <div class="ttc" id="aclassgtirb_1_1_i_r_html_a0bd72ac82d93666d38685586bdaec1cc"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#a0bd72ac82d93666d38685586bdaec1cc">gtirb::IR::getCFG</a></div><div class="ttdeci">CFG &amp; getCFG()</div></div>
@@ -186,7 +191,6 @@ $(function() {
 <div class="ttc" id="aclassgtirb_1_1_i_r_html_ad3a0cfef0c784d5a16bab4d49f9bf448"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#ad3a0cfef0c784d5a16bab4d49f9bf448">gtirb::IR::modules_begin</a></div><div class="ttdeci">module_iterator modules_begin()</div></div>
 <div class="ttc" id="aclassgtirb_1_1_i_r_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html">gtirb::IR</a></div></div>
 <div class="ttc" id="aclassgtirb_1_1_code_block_html_ae4b422fc7b8432677c0ba0fde33064f7"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_code_block.html#ae4b422fc7b8432677c0ba0fde33064f7">gtirb::CodeBlock::getAddress</a></div><div class="ttdeci">std::optional&lt; Addr &gt; getAddress() const</div></div>
-<div class="ttc" id="aclassgtirb_1_1_i_r_html_ad6e4950f04b44e841b6fa150bbd5944d"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#ad6e4950f04b44e841b6fa150bbd5944d">gtirb::IR::load</a></div><div class="ttdeci">static IR * load(Context &amp;C, std::istream &amp;In)</div></div>
 <div class="ttc" id="agroup___c_f_g___g_r_o_u_p_html_ga3081eeb52071b18e3928ee5f4b1671ed"><div class="ttname"><a href="../html/cpp/group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a></div><div class="ttdeci">CfgBuilder&lt; boost::listS, boost::listS, boost::bidirectionalS &gt;::type CFG</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.6.1</span>
+   &#160;<span id="projectnumber">v1.7.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -166,7 +166,7 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classgtirb_1_1_addr.html#ab014a328ef23167c2432b0a8c5c85af1">  176</a></span>&#160;  <span class="keyword">friend</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="classgtirb_1_1_addr.html#ab014a328ef23167c2432b0a8c5c85af1">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classgtirb_1_1_addr.html">Addr</a>&amp; LHS, <span class="keyword">const</span> <a class="code" href="classgtirb_1_1_addr.html">Addr</a>&amp; RHS) noexcept {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> !operator==(LHS, RHS);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> !<a class="code" href="namespacegtirb.html#a31c5464f9284c4eca4d83dc4eb94073c">operator==</a>(LHS, RHS);</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classgtirb_1_1_addr.html#a0a1b9a244c2a4412f860b7c5862597fd">  181</a></span>&#160;  <span class="keyword">friend</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="classgtirb_1_1_addr.html#a0a1b9a244c2a4412f860b7c5862597fd">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classgtirb_1_1_addr.html">Addr</a>&amp; LHS, <span class="keyword">const</span> <a class="code" href="classgtirb_1_1_addr.html">Addr</a>&amp; RHS) noexcept {</div>
@@ -253,6 +253,7 @@ $(function() {
 <div class="ttc" id="aclassgtirb_1_1_addr_html_a3457be12fca4b866e63f29761f51b38f"><div class="ttname"><a href="classgtirb_1_1_addr.html#a3457be12fca4b866e63f29761f51b38f">gtirb::Addr::operator--</a></div><div class="ttdeci">constexpr Addr &amp; operator--() noexcept</div><div class="ttdoc">Predecrement for Addr.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:90</div></div>
 <div class="ttc" id="aclassgtirb_1_1_addr_html_aa2a89dee214af3b229ae8bcd17107af0"><div class="ttname"><a href="classgtirb_1_1_addr.html#aa2a89dee214af3b229ae8bcd17107af0">gtirb::Addr::operator--</a></div><div class="ttdeci">constexpr Addr operator--(int) noexcept</div><div class="ttdoc">Postdecrement for Addr.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:99</div></div>
 <div class="ttc" id="aclassgtirb_1_1_addr_html_af3a0d4c6ee0218311b1f67b40b97b540"><div class="ttname"><a href="classgtirb_1_1_addr.html#af3a0d4c6ee0218311b1f67b40b97b540">gtirb::Addr::operator-=</a></div><div class="ttdeci">constexpr Addr &amp; operator-=(value_type Offset) noexcept</div><div class="ttdoc">Subtract-assign for Addr.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:153</div></div>
+<div class="ttc" id="anamespacegtirb_html_a31c5464f9284c4eca4d83dc4eb94073c"><div class="ttname"><a href="namespacegtirb.html#a31c5464f9284c4eca4d83dc4eb94073c">gtirb::operator==</a></div><div class="ttdeci">std::enable_if_t&lt; std::is_error_code_enum&lt; E &gt;::value||std::is_error_condition_enum&lt; E &gt;::value, bool &gt; operator==(const ErrorOr&lt; T &gt; &amp;Err, E Code)</div><div class="ttdef"><b>Definition:</b> ErrorOr.hpp:253</div></div>
 <div class="ttc" id="aclassgtirb_1_1_addr_html_ad87a709c7fb1ffa66f70cf2c0c32ab07"><div class="ttname"><a href="classgtirb_1_1_addr.html#ad87a709c7fb1ffa66f70cf2c0c32ab07">gtirb::Addr::Addr</a></div><div class="ttdeci">constexpr Addr() noexcept</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:45</div></div>
 <div class="ttc" id="aclassgtirb_1_1_addr_html_a998609637ee0f9d82003e93a3d2fb74d"><div class="ttname"><a href="classgtirb_1_1_addr.html#a998609637ee0f9d82003e93a3d2fb74d">gtirb::Addr::difference_type</a></div><div class="ttdeci">int64_t difference_type</div><div class="ttdoc">The type used to represent a difference between two Addr objects.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:42</div></div>
 <div class="ttc" id="astructgtirb_1_1_offset_html"><div class="ttname"><a href="structgtirb_1_1_offset.html">gtirb::Offset</a></div><div class="ttdoc">Describes a location inside a block or data object.</div><div class="ttdef"><b>Definition:</b> Offset.hpp:31</div></div>

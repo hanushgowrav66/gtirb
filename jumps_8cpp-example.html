@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.6.1</span>
+   &#160;<span id="projectnumber">v1.7.1</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -92,13 +92,16 @@ $(function() {
 <div class="line">  <a name="_a1"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_context.html">Context</a> C;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Load the IR</span></div>
-<div class="line">  <a name="_a2"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html">IR</a>* Ir;</div>
+<div class="line">  <a name="_a2"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html">IR</a>* Ir = <span class="keyword">nullptr</span>;</div>
 <div class="line"> </div>
-<div class="line">  assert(argc == 2);</div>
-<div class="line">  {</div>
+<div class="line">  <span class="keywordflow">if</span> (argc == 2) {</div>
 <div class="line">    std::ifstream in(argv[1]);</div>
-<div class="line">    Ir = <a name="a3"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html#ad6e4950f04b44e841b6fa150bbd5944d">IR::load</a>(C, in);</div>
+<div class="line">    <span class="keywordflow">if</span> (<span class="keyword">auto</span> IoE = <a name="a3"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html#a3eb7d2a745085cd7c7ed37845ef57028">IR::load</a>(C, in); IoE)</div>
+<div class="line">      Ir = *IoE;</div>
 <div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">if</span> (!Ir)</div>
+<div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Initialize capstone for decoding instructions.</span></div>
 <div class="line">  csh CsHandle;</div>
@@ -137,15 +140,16 @@ $(function() {
 <div class="line">      }</div>
 <div class="line">    }</div>
 <div class="line">  }</div>
+<div class="line">  <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 <div class="ttc" id="aclassgtirb_1_1_addr_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_addr.html">gtirb::Addr</a></div></div>
+<div class="ttc" id="aclassgtirb_1_1_i_r_html_a3eb7d2a745085cd7c7ed37845ef57028"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#a3eb7d2a745085cd7c7ed37845ef57028">gtirb::IR::load</a></div><div class="ttdeci">static ErrorOr&lt; IR * &gt; load(Context &amp;C, std::istream &amp;In)</div></div>
 <div class="ttc" id="aclassgtirb_1_1_context_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_context.html">gtirb::Context</a></div></div>
 <div class="ttc" id="agtirb_8hpp.html_html"><div class="ttname"><a href="../html/cpp/gtirb_8hpp.html">gtirb.hpp</a></div></div>
 <div class="ttc" id="aclassgtirb_1_1_i_r_html_a0bd72ac82d93666d38685586bdaec1cc"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#a0bd72ac82d93666d38685586bdaec1cc">gtirb::IR::getCFG</a></div><div class="ttdeci">CFG &amp; getCFG()</div></div>
 <div class="ttc" id="anamespacegtirb_html"><div class="ttname"><a href="../html/cpp/namespacegtirb.html">gtirb</a></div></div>
 <div class="ttc" id="aclassgtirb_1_1_i_r_html"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html">gtirb::IR</a></div></div>
-<div class="ttc" id="aclassgtirb_1_1_i_r_html_ad6e4950f04b44e841b6fa150bbd5944d"><div class="ttname"><a href="../html/cpp/classgtirb_1_1_i_r.html#ad6e4950f04b44e841b6fa150bbd5944d">gtirb::IR::load</a></div><div class="ttdeci">static IR * load(Context &amp;C, std::istream &amp;In)</div></div>
 <div class="ttc" id="agroup___c_f_g___g_r_o_u_p_html_ga5039337a49b78d1fe67d47a61f8fcba9"><div class="ttname"><a href="../html/cpp/group___c_f_g___g_r_o_u_p.html#ga5039337a49b78d1fe67d47a61f8fcba9">gtirb::blocks</a></div><div class="ttdeci">GTIRB_EXPORT_API boost::iterator_range&lt; block_iterator &gt; blocks(CFG &amp;Cfg)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

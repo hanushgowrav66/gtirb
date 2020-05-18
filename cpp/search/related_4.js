@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ir_820',['IR',['../classgtirb_1_1_module.html#a47786621fcff3a7083a2cb697eff0b8c',1,'gtirb::Module']]]
+  ['fromprotobuf_855',['fromProtobuf',['../structgtirb_1_1_offset.html#a85d10cecc79b47d924d226759afab32b',1,'gtirb::Offset']]]
 ];
