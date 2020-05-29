@@ -1868,36 +1868,19 @@ equality.</p>
 
 <dl class="py class">
 <dt id="gtirb.Offset">
-<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">Offset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">element_id</span></em>, <em class="sig-param"><span class="n">displacement</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/offset.html#Offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.Offset" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>An Offset describes a location inside a <a class="reference internal" href="#gtirb.CodeBlock" title="gtirb.CodeBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.CodeBlock</span></code></a>
-or <a class="reference internal" href="#gtirb.DataBlock" title="gtirb.DataBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.DataBlock</span></code></a>.</p>
+<em class="property">class </em><code class="sig-prename descclassname">gtirb.</code><code class="sig-name descname">Offset</code><a class="reference internal" href="_modules/gtirb/offset.html#Offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.Offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.offset.NamedTuple</span></code></p>
+<p>An Offset describes a location inside a <a class="reference internal" href="#gtirb.Node" title="gtirb.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.Node</span></code></a>, such as a
+<a class="reference internal" href="#gtirb.DataBlock" title="gtirb.DataBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.DataBlock</span></code></a> or <a class="reference internal" href="#gtirb.ByteInterval" title="gtirb.ByteInterval"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.ByteInterval</span></code></a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>element_id</strong> – The UUID of a <a class="reference internal" href="#gtirb.ByteBlock" title="gtirb.ByteBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.ByteBlock</span></code></a>
-containing the location of interest.</p></li>
+<li><p><strong>element_id</strong> – The <a class="reference internal" href="#gtirb.Node" title="gtirb.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.Node</span></code></a> containing the location of
+interest.</p></li>
 <li><p><strong>displacement</strong> – The offset inside the Node to point to.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt id="gtirb.Offset.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">element_id</span></em>, <em class="sig-param"><span class="n">displacement</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gtirb/offset.html#Offset.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gtirb.Offset.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>element_id</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">uuid.UUID</span></code>) – The UUID of a <a class="reference internal" href="#gtirb.ByteBlock" title="gtirb.ByteBlock"><code class="xref py py-class docutils literal notranslate"><span class="pre">gtirb.ByteBlock</span></code></a>
-containing the location of interest.</p></li>
-<li><p><strong>displacement</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – The offset inside the Node to point to.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="py class">

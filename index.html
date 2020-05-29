@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.8.4</span>
+   &#160;<span id="projectnumber">v1.8.5</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -137,17 +137,19 @@ Ubuntu</h2>
 <p>Instructions for adding the appropriate PPAS and installing GTIRB on each platform follow.</p>
 <h3><a class="anchor" id="autotoc_md9"></a>
 Ubuntu16</h3>
-<p><a class="anchor" id="ubuntu16"></a> </p><div class="fragment"><div class="line">sudo add-apt-repository ppa:maarten-fonville/protobuf</div>
+<p><a class="anchor" id="ubuntu16"></a> </p><div class="fragment"><div class="line">sudo apt-get install software-properties-common</div>
+<div class="line">sudo add-apt-repository ppa:maarten-fonville/protobuf</div>
 <div class="line">sudo add-apt-repository ppa:mhier/libboost-latest</div>
 <div class="line">echo &quot;deb https://grammatech.github.io/gtirb/pkgs/xenial ./&quot; | sudo tee -a /etc/apt/sources.list.d/gtirb.list</div>
 <div class="line">sudo apt-get update</div>
-<div class="line">sudo apt-get install --allow-unauthenticated gtirb</div>
+<div class="line">sudo apt-get install --allow-unauthenticated libgtirb gtirb-pprinter ddisasm</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md10"></a>
 Ubuntu18</h3>
-<p><a class="anchor" id="ubuntu18"></a> </p><div class="fragment"><div class="line">sudo add-apt-repository ppa:mhier/libboost-latest</div>
+<p><a class="anchor" id="ubuntu18"></a> </p><div class="fragment"><div class="line">sudo apt-get install software-properties-common</div>
+<div class="line">sudo add-apt-repository ppa:mhier/libboost-latest</div>
 <div class="line">echo &quot;deb [trusted=yes] https://grammatech.github.io/gtirb/pkgs/bionic ./&quot; | sudo tee -a /etc/apt/sources.list.d/gtirb.list</div>
 <div class="line">sudo apt-get update</div>
-<div class="line">sudo apt-get install gtirb</div>
+<div class="line">sudo apt-get install libgtirb gtirb-pprinter ddisasm</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
 Arch Linux</h2>
 <p><a class="anchor" id="arch-linux"></a> Arch packages are available for download from <a href="https://grammatech.github.io/gtirb/pkgs/arch/">https://grammatech.github.io/gtirb/pkgs/arch/</a> and may be directly installed with <code>pacman</code>.</p>
