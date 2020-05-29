@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -169,6 +169,10 @@ Related Functions</h2></td></tr>
 <tr class="memitem:ab71cf47517e8350df35b83ed7b53d5d8"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classgtirb_1_1_addr.html">Addr</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_addr.html#ab71cf47517e8350df35b83ed7b53d5d8">addressLimit</a> (const T &amp;Object)</td></tr>
 <tr class="memdesc:ab71cf47517e8350df35b83ed7b53d5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exclusive upper limit of an object's address range.  <a href="classgtirb_1_1_addr.html#ab71cf47517e8350df35b83ed7b53d5d8">More...</a><br /></td></tr>
 <tr class="separator:ab71cf47517e8350df35b83ed7b53d5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add36c3d6cfab0d36687f5f282c9200fb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:add36c3d6cfab0d36687f5f282c9200fb"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classgtirb_1_1_addr_range.html">AddrRange</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_addr.html#add36c3d6cfab0d36687f5f282c9200fb">addressRange</a> (const T &amp;Object)</td></tr>
+<tr class="memdesc:add36c3d6cfab0d36687f5f282c9200fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Address range of an object.  <a href="classgtirb_1_1_addr.html#add36c3d6cfab0d36687f5f282c9200fb">More...</a><br /></td></tr>
+<tr class="separator:add36c3d6cfab0d36687f5f282c9200fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae383b8506983e0b2f8a77284e635684b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae383b8506983e0b2f8a77284e635684b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_addr.html#ae383b8506983e0b2f8a77284e635684b">containsAddr</a> (const T &amp;Object, <a class="el" href="classgtirb_1_1_addr.html">Addr</a> Ea)</td></tr>
 <tr class="memdesc:ae383b8506983e0b2f8a77284e635684b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check: Does the specified object contain the specified address?  <a href="classgtirb_1_1_addr.html#ae383b8506983e0b2f8a77284e635684b">More...</a><br /></td></tr>
@@ -591,6 +595,49 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An address (<a class="el" href="classgtirb_1_1_addr.html">Addr</a>) A such that A-1 is in <code>Object</code> and A is not. </dd></dl>
+
+</div>
+</div>
+<a id="add36c3d6cfab0d36687f5f282c9200fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add36c3d6cfab0d36687f5f282c9200fb">&#9670;&nbsp;</a></span>addressRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="classgtirb_1_1_addr_range.html">AddrRange</a> &gt; addressRange </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">related</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Address range of an object. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Any type that specifies a range of addresses via getAddress() and getSize() methods (e.g., <a class="el" href="classgtirb_1_1_data_block.html" title="Represents a data object, possibly symbolic.">DataBlock</a>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Object</td><td>The object to interrogate.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An address range (<a class="el" href="classgtirb_1_1_addr_range.html">AddrRange</a>) [L, H) such that all and only the addresses L &lt;= A &lt; H are in <code>Object</code>, or <code>std::nullopt</code> if the object's addresses are not defined. </dd></dl>
 
 </div>
 </div>

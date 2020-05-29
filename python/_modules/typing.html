@@ -633,7 +633,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">__bound__</span> <span class="o">=</span> <span class="n">_type_check</span><span class="p">(</span><span class="n">bound</span><span class="p">,</span> <span class="s2">&quot;Bound must be a type.&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">__bound__</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="n">def_mod</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_getframe</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">f_globals</span><span class="p">[</span><span class="s1">&#39;__name__&#39;</span><span class="p">]</span>  <span class="c1"># for pickling</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">def_mod</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">_getframe</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">f_globals</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__name__&#39;</span><span class="p">,</span> <span class="s1">&#39;__main__&#39;</span><span class="p">)</span>  <span class="c1"># for pickling</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="n">def_mod</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">def_mod</span> <span class="o">!=</span> <span class="s1">&#39;typing&#39;</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">=</span> <span class="n">def_mod</span>
 
@@ -1330,7 +1333,7 @@
 <span class="sd">        get_args(Union[int, Tuple[T, int]][str]) == (int, Tuple[str, int])</span>
 <span class="sd">        get_args(Callable[[], T][int]) == ([], int)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">_GenericAlias</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">_GenericAlias</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">tp</span><span class="o">.</span><span class="n">_special</span><span class="p">:</span>
         <span class="n">res</span> <span class="o">=</span> <span class="n">tp</span><span class="o">.</span><span class="n">__args__</span>
         <span class="k">if</span> <span class="n">get_origin</span><span class="p">(</span><span class="n">tp</span><span class="p">)</span> <span class="ow">is</span> <span class="n">collections</span><span class="o">.</span><span class="n">abc</span><span class="o">.</span><span class="n">Callable</span> <span class="ow">and</span> <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">Ellipsis</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">res</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">res</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
@@ -2096,7 +2099,7 @@
       &copy;2020, Grammatech, Inc.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -87,6 +87,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_addr.html">Addr</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A special class to store an Effective Address.  <a href="classgtirb_1_1_addr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_addr_range.html">AddrRange</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A range of addresses.  <a href="classgtirb_1_1_addr_range.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgtirb_1_1auxdata__traits.html">auxdata_traits</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides type information and serialization functions for types which can be stored in AuxData.  <a href="structgtirb_1_1auxdata__traits.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,17 +99,26 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_byte_interval.html">ByteInterval</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A contiguous region of bytes in a binary.  <a href="classgtirb_1_1_byte_interval.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_byte_interval_observer.html">ByteIntervalObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when the <a class="el" href="classgtirb_1_1_byte_interval.html" title="A contiguous region of bytes in a binary.">ByteInterval</a> is modified.  <a href="classgtirb_1_1_byte_interval_observer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base of types that can be inserted into the CFG.  <a href="classgtirb_1_1_cfg_node.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_code_block.html">CodeBlock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A basic block.  <a href="classgtirb_1_1_code_block.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_code_block_observer.html">CodeBlockObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when a <a class="el" href="classgtirb_1_1_code_block.html" title="A basic block.">CodeBlock</a> is modified.  <a href="classgtirb_1_1_code_block_observer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_context.html">Context</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The context under which GTIRB operations occur.  <a href="classgtirb_1_1_context.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_data_block.html">DataBlock</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a data object, possibly symbolic.  <a href="classgtirb_1_1_data_block.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_data_block_observer.html">DataBlockObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when a <a class="el" href="classgtirb_1_1_data_block.html" title="Represents a data object, possibly symbolic.">DataBlock</a> is modified.  <a href="classgtirb_1_1_data_block_observer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_error_or.html">ErrorOr</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,8 +134,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_module.html">Module</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single binary (library or executable).  <a href="classgtirb_1_1_module.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_node.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base of the <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> class hierarchy.  <a href="classgtirb_1_1_node.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_module_observer.html">ModuleObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when the <a class="el" href="classgtirb_1_1_module.html" title="Represents a single binary (library or executable).">Module</a> is updated.  <a href="classgtirb_1_1_module_observer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgtirb_1_1_offset.html">Offset</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes a location inside a block or data object.  <a href="structgtirb_1_1_offset.html#details">More...</a><br /></td></tr>
@@ -134,6 +146,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_section.html">Section</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a named section of the binary.  <a href="classgtirb_1_1_section.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_section_observer.html">SectionObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when the <a class="el" href="classgtirb_1_1_section.html" title="Represents a named section of the binary.">Section</a> is modified.  <a href="classgtirb_1_1_section_observer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgtirb_1_1_sym_addr_addr.html">SymAddrAddr</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a <a class="el" href="group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html">symbolic operand</a> of the form "(Sym1 - Sym2) / Scale + Offset".  <a href="structgtirb_1_1_sym_addr_addr.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +157,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_symbol.html">Symbol</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a <a class="el" href="classgtirb_1_1_symbol.html" title="Represents a Symbol, which maps a name to an object in the IR.">Symbol</a>, which maps a name to an object in the <a class="el" href="classgtirb_1_1_i_r.html" title="A complete internal representation consisting of Modules (Module).">IR</a>.  <a href="classgtirb_1_1_symbol.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_symbol_observer.html">SymbolObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for notifying observers when the <a class="el" href="classgtirb_1_1_symbol.html" title="Represents a Symbol, which maps a name to an object in the IR.">Symbol</a> is updated.  <a href="classgtirb_1_1_symbol_observer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structgtirb_1_1_sym_stack_const.html">SymStackConst</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a <a class="el" href="group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html">symbolic operand</a> of the form "Sym + Offset", representing an offset from a stack variable.  <a href="structgtirb_1_1_sym_stack_const.html#details">More...</a><br /></td></tr>
@@ -171,11 +189,16 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:ga76c75a30283841464ab659824167b1b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <a class="el" href="group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html">symbolic expression</a>.  <a href="group___s_y_m_b_o_l_i_c___e_x_p_r_e_s_s_i_o_n___g_r_o_u_p.html#ga76c75a30283841464ab659824167b1b8">More...</a><br /></td></tr>
 <tr class="separator:ga76c75a30283841464ab659824167b1b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70b3d23477329aeb2a0d320d0c50e1e5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a70b3d23477329aeb2a0d320d0c50e1e5">UUID</a> = boost::uuids::uuid</td></tr>
-<tr class="memdesc:a70b3d23477329aeb2a0d320d0c50e1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a universally unique identifier used to identify <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> objects across serialization boundaries.  <a href="namespacegtirb.html#a70b3d23477329aeb2a0d320d0c50e1e5">More...</a><br /></td></tr>
+<tr class="memdesc:a70b3d23477329aeb2a0d320d0c50e1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a universally unique identifier used to identify Node objects across serialization boundaries.  <a href="namespacegtirb.html#a70b3d23477329aeb2a0d320d0c50e1e5">More...</a><br /></td></tr>
 <tr class="separator:a70b3d23477329aeb2a0d320d0c50e1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ad7db2026ea49abab0562fd0cf344a00b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#ad7db2026ea49abab0562fd0cf344a00b">ChangeStatus</a> { <a class="el" href="namespacegtirb.html#ad7db2026ea49abab0562fd0cf344a00bad37b1f6c0512e2118cee17fea015b699">ChangeStatus::Rejected</a>, 
+<a class="el" href="namespacegtirb.html#ad7db2026ea49abab0562fd0cf344a00ba382ab522931673c11e398ead1b7b1678">ChangeStatus::Accepted</a>, 
+<a class="el" href="namespacegtirb.html#ad7db2026ea49abab0562fd0cf344a00ba4bac8cdf0a968472b519b3b295d0d48b">ChangeStatus::NoChange</a>
+ }</td></tr>
+<tr class="separator:ad7db2026ea49abab0562fd0cf344a00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae81a540637128cef60bdd90806d28063"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gae81a540637128cef60bdd90806d28063">ConditionalEdge</a> : bool { <a class="el" href="group___c_f_g___g_r_o_u_p.html#ggae81a540637128cef60bdd90806d28063a285401ebb613b552d7f7fdce68472211">ConditionalEdge::OnFalse</a>, 
 <a class="el" href="group___c_f_g___g_r_o_u_p.html#ggae81a540637128cef60bdd90806d28063a9afa03f04e93fb31bfaab23cbeaa452d">ConditionalEdge::OnTrue</a>
  }</td></tr>
@@ -249,9 +272,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga8a20702c5f700c156869681cecb40e61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::optional&lt; CFG::edge_descriptor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga8a20702c5f700c156869681cecb40e61">addEdge</a> (const <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *From, const <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *To, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga8a20702c5f700c156869681cecb40e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new edge between two CFG nodes if they exist in the graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga8a20702c5f700c156869681cecb40e61">More...</a><br /></td></tr>
 <tr class="separator:ga8a20702c5f700c156869681cecb40e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> CFG::vertex_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gab10aaeb0a362541494e5f2a8159d7ffc">addVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *B, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
-<tr class="memdesc:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gab10aaeb0a362541494e5f2a8159d7ffc">More...</a><br /></td></tr>
-<tr class="separator:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab44a89bb681c95a710cd225e17bf324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::pair&lt; CFG::vertex_descriptor, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaab44a89bb681c95a710cd225e17bf324">addVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *B, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
+<tr class="memdesc:gaab44a89bb681c95a710cd225e17bf324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gaab44a89bb681c95a710cd225e17bf324">More...</a><br /></td></tr>
+<tr class="separator:gaab44a89bb681c95a710cd225e17bf324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e6e4b62f3e61aa207bcfe8c13145ab6"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:a0e6e4b62f3e61aa207bcfe8c13145ab6"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; uint64_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a0e6e4b62f3e61aa207bcfe8c13145ab6">asOptionalSize</a> (std::optional&lt; uint64_t &gt; X)</td></tr>
 <tr class="separator:a0e6e4b62f3e61aa207bcfe8c13145ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,7 +284,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a34bfdae2a08eae72a7d3481862e49119"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:a34bfdae2a08eae72a7d3481862e49119"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; uint64_t &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a34bfdae2a08eae72a7d3481862e49119">asOptionalSize</a> (uint64_t X)</td></tr>
 <tr class="separator:a34bfdae2a08eae72a7d3481862e49119"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a0b64dbe417746abe73a30a1fe9ef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> <a class="el" href="classgtirb_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a82a0b64dbe417746abe73a30a1fe9ef7">AuxDataContainer</a> (<a class="el" href="classgtirb_1_1_context.html">Context</a> &amp;C, Kind knd)</td></tr>
+<tr class="memitem:a82a0b64dbe417746abe73a30a1fe9ef7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a82a0b64dbe417746abe73a30a1fe9ef7">AuxDataContainer</a> (<a class="el" href="classgtirb_1_1_context.html">Context</a> &amp;C, Kind knd)</td></tr>
 <tr class="separator:a82a0b64dbe417746abe73a30a1fe9ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5039337a49b78d1fe67d47a61f8fcba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> boost::iterator_range&lt; <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga5cabebe153bdd1b9abe21cfdc10ed267">block_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga5039337a49b78d1fe67d47a61f8fcba9">blocks</a> (<a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga5039337a49b78d1fe67d47a61f8fcba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a range of just the Block elements in the specified graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga5039337a49b78d1fe67d47a61f8fcba9">More...</a><br /></td></tr>
@@ -287,9 +310,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memTemplParams" colspan="2">template&lt;class T , class E &gt; </td></tr>
 <tr class="memitem:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_error_code_enum&lt; E &gt;::value||std::is_error_condition_enum&lt; E &gt;::value, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacegtirb.html#a31c5464f9284c4eca4d83dc4eb94073c">operator==</a> (const <a class="el" href="classgtirb_1_1_error_or.html">ErrorOr</a>&lt; T &gt; &amp;Err, E Code)</td></tr>
 <tr class="separator:a31c5464f9284c4eca4d83dc4eb94073c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">removeVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
-<tr class="memdesc:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node from the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">More...</a><br /></td></tr>
-<tr class="separator:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7231eb377163cc5539321abe705280a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaa7231eb377163cc5539321abe705280a">removeVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
+<tr class="memdesc:gaa7231eb377163cc5539321abe705280a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node from the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gaa7231eb377163cc5539321abe705280a">More...</a><br /></td></tr>
+<tr class="separator:gaa7231eb377163cc5539321abe705280a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main namespace for the GTIRB API. </p>
@@ -306,14 +329,41 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Represents a universally unique identifier used to identify <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> objects across serialization boundaries. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> </dd>
+<p>Represents a universally unique identifier used to identify Node objects across serialization boundaries. </p>
+<dl class="section see"><dt>See also</dt><dd>Node </dd>
 <dd>
 <a class="el" href="classgtirb_1_1_context.html" title="The context under which GTIRB operations occur.">Context</a> </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad7db2026ea49abab0562fd0cf344a00b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7db2026ea49abab0562fd0cf344a00b">&#9670;&nbsp;</a></span>ChangeStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacegtirb.html#ad7db2026ea49abab0562fd0cf344a00b">gtirb::ChangeStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad7db2026ea49abab0562fd0cf344a00bad37b1f6c0512e2118cee17fea015b699"></a>Rejected&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7db2026ea49abab0562fd0cf344a00ba382ab522931673c11e398ead1b7b1678"></a>Accepted&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad7db2026ea49abab0562fd0cf344a00ba4bac8cdf0a968472b519b3b295d0d48b"></a>NoChange&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a7e4c1ed3a95c05b68d4b4f6b5d4282b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e4c1ed3a95c05b68d4b4f6b5d4282b0">&#9670;&nbsp;</a></span>FileFormat</h2>
 
@@ -518,7 +568,7 @@ template&lt;&gt; </div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> <a class="el" href="classgtirb_1_1_node.html">Node</a> <a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> </td>
+          <td class="memname"><a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> Node <a class="el" href="classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgtirb_1_1_context.html">Context</a> &amp;&#160;</td>
           <td class="paramname"><em>C</em>, </td>

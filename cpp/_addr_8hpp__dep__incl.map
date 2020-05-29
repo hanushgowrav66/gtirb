@@ -1,16 +1,16 @@
 <map id="Addr.hpp" name="Addr.hpp">
-<area shape="rect" id="node1" title="Class gtirb::Addr and related functions." alt="" coords="539,5,618,32"/>
-<area shape="rect" id="node2" href="$_aux_data_8hpp.html" title="Types and operations for auxiliary data." alt="" coords="165,229,272,256"/>
-<area shape="rect" id="node4" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="325,453,387,480"/>
-<area shape="rect" id="node5" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="787,528,867,555"/>
-<area shape="rect" id="node6" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="600,379,699,405"/>
-<area shape="rect" id="node7" href="$_aux_data_schema_8hpp.html" title="Type schema for sanctioned AuxData types." alt="" coords="1206,155,1365,181"/>
-<area shape="rect" id="node8" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="1011,229,1130,256"/>
-<area shape="rect" id="node9" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="988,304,1087,331"/>
-<area shape="rect" id="node10" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="819,229,936,256"/>
-<area shape="rect" id="node11" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="488,304,587,331"/>
-<area shape="rect" id="node12" href="$_symbolic_expression_8hpp.html" title="Types and operations for symbolic expressions." alt="" coords="627,80,808,107"/>
-<area shape="rect" id="node14" href="$_utility_8hpp.html" title=" " alt="" coords="403,229,491,256"/>
-<area shape="rect" id="node3" href="$_aux_data_container_8hpp.html" title="Class gtirb::AuxDataContainer." alt="" coords="195,304,363,331"/>
-<area shape="rect" id="node13" href="$_byte_interval_8hpp.html" title="Class gtirb::ByteInterval." alt="" coords="683,155,813,181"/>
+<area shape="rect" id="node1" title="Class gtirb::Addr and related functions." alt="" coords="566,5,645,32"/>
+<area shape="rect" id="node2" href="$_aux_data_8hpp.html" title="Types and operations for auxiliary data." alt="" coords="101,229,208,256"/>
+<area shape="rect" id="node4" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="343,453,406,480"/>
+<area shape="rect" id="node5" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="700,528,780,555"/>
+<area shape="rect" id="node6" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="553,379,652,405"/>
+<area shape="rect" id="node7" href="$_aux_data_schema_8hpp.html" title="Type schema for sanctioned AuxData types." alt="" coords="1097,155,1255,181"/>
+<area shape="rect" id="node8" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="790,229,909,256"/>
+<area shape="rect" id="node9" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="691,304,789,331"/>
+<area shape="rect" id="node10" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="547,229,664,256"/>
+<area shape="rect" id="node11" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="864,304,963,331"/>
+<area shape="rect" id="node12" href="$_symbolic_expression_8hpp.html" title="Types and operations for symbolic expressions." alt="" coords="840,80,1021,107"/>
+<area shape="rect" id="node14" href="$_utility_8hpp.html" title=" " alt="" coords="384,229,472,256"/>
+<area shape="rect" id="node3" href="$_aux_data_container_8hpp.html" title="Class gtirb::AuxDataContainer." alt="" coords="144,304,312,331"/>
+<area shape="rect" id="node13" href="$_byte_interval_8hpp.html" title="Class gtirb::ByteInterval." alt="" coords="840,155,971,181"/>
 </map>

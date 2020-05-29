@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,24 +68,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md164">ProxyBlock</a><ul><li class="level2"><a href="#autotoc_md165">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md166">API Implementations</a><ul><li class="level3"><a href="#autotoc_md167">ProxyBlock Classes</a></li>
-<li class="level3"><a href="#autotoc_md168">Associated Module</a></li>
+<ul><li class="level1"><a href="#autotoc_md165">ProxyBlock</a><ul><li class="level2"><a href="#autotoc_md166">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md167">API Implementations</a><ul><li class="level3"><a href="#autotoc_md168">ProxyBlock Classes</a></li>
+<li class="level3"><a href="#autotoc_md169">Associated Module</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md169">Links</a></li>
+<li class="level2"><a href="#autotoc_md170">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md164"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md165"></a>
 ProxyBlock</h1>
 <p><a class="anchor" id="proxyblock"></a></p>
 <p>A <b>ProxyBlock</b> is a placeholder that serves as the endpoint (source or target) of a <a class="el" href="md__cfg_edge.html">CfgEdge</a>.</p>
 <p><b>ProxyBlock</b> objects allow the construction of CFG edges to or from another node. For example, a call to a function in another module may be represented by an edge that originates at the calling <a class="el" href="md__code_block.html">CodeBlock</a> and targets a <b>ProxyBlock</b>. Another example would be an edge that represents an indirect jump whose target is not known.</p>
 <p>A <b>ProxyBlock</b> does not represent any instructions and so has neither an address nor a size.</p>
 <p>The corresponding Protobuf message type is <code>ProxyBlock</code>.</p>
-<h2><a class="anchor" id="autotoc_md165"></a>
+<h2><a class="anchor" id="autotoc_md166"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -97,11 +97,11 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md166"></a>
+<h2><a class="anchor" id="autotoc_md167"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md167"></a>
+<h3><a class="anchor" id="autotoc_md168"></a>
 ProxyBlock Classes</h3>
 <p><a class="anchor" id="proxyblock-classes"></a></p>
 <table class="markdownTable">
@@ -114,7 +114,7 @@ ProxyBlock Classes</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>proxy-block</b>  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md168"></a>
+<h3><a class="anchor" id="autotoc_md169"></a>
 Associated Module</h3>
 <p><a class="anchor" id="associated-module"></a></p>
 <table class="markdownTable">
@@ -127,7 +127,7 @@ Associated Module</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>module</b> (<em>object</em> <em>proxy-block</em>) =&gt; <em>result</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md169"></a>
+<h2><a class="anchor" id="autotoc_md170"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

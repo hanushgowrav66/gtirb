@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -93,12 +93,22 @@ $(function() {
 <div class="line">  <span class="comment">// all the objects within it.</span></div>
 <div class="line">  <a name="_a0"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_context.html">Context</a> C;</div>
 <div class="line">  <span class="keyword">auto</span>* Ir = <a name="a1"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_i_r.html#a70cecfd85801a7d3273f109ce230331f">IR::Create</a>(C);</div>
+<div class="line"> </div>
 <div class="line">  <span class="comment">// Every IR holds a set of modules (`gtirb::Module`).</span></div>
-<div class="line">  <span class="keyword">auto</span>* M = Ir-&gt;addModule(<a name="a2"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_module.html#a998f49d2011b8b589d6fcfb4e1268341">Module::Create</a>(C));</div>
+<div class="line">  <span class="keyword">auto</span>* M = <a name="a2"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_module.html#a998f49d2011b8b589d6fcfb4e1268341">Module::Create</a>(C);</div>
+<div class="line">  Ir-&gt;addModule(M);</div>
+<div class="line">  <span class="comment">// Could also have written: auto* M = Ir-&gt;addModule(C);</span></div>
+<div class="line"> </div>
 <div class="line">  <span class="comment">// Every module holds a set of sections (`gtirb::Section`).</span></div>
-<div class="line">  <span class="keyword">auto</span>* S = M-&gt;addSection(<a name="a3"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_section.html#ab409db7dccee9aac92c00eb4a1a3b50d">Section::Create</a>(C, <span class="stringliteral">&quot;.text&quot;</span>));</div>
+<div class="line">  <span class="keyword">auto</span>* S = <a name="a3"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_section.html#ab409db7dccee9aac92c00eb4a1a3b50d">Section::Create</a>(C, <span class="stringliteral">&quot;.text&quot;</span>);</div>
+<div class="line">  M-&gt;addSection(S);</div>
+<div class="line">  <span class="comment">// Could also have written: auto* S = M-&gt;addSection(C, &quot;.text&quot;);</span></div>
+<div class="line"> </div>
 <div class="line">  <span class="comment">// Every section has a set of byte intervals (`gtirb::ByteInterval`).</span></div>
-<div class="line">  <span class="keyword">auto</span>* BI = S-&gt;addByteInterval(<a name="a4"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_byte_interval.html#a18925fb9dca97989ae51261de981deed">ByteInterval::Create</a>(C, <a name="_a5"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_addr.html">Addr</a>(2048), 466));</div>
+<div class="line">  <span class="keyword">auto</span>* BI = <a name="a4"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_byte_interval.html#a18925fb9dca97989ae51261de981deed">ByteInterval::Create</a>(C, <a name="_a5"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_addr.html">Addr</a>(2048), 466);</div>
+<div class="line">  S-&gt;addByteInterval(BI);</div>
+<div class="line">  <span class="comment">// Could also have written: auto* BI = S-&gt;addByteInterval(C, Addr(2048), 466);</span></div>
+<div class="line"> </div>
 <div class="line">  <span class="comment">// Create some data objects. These only define the layout and do not directly</span></div>
 <div class="line">  <span class="comment">// store any data.</span></div>
 <div class="line">  <span class="keyword">auto</span>* D1 = <a name="a6"></a><a class="codeRef" href="../html/cpp/classgtirb_1_1_data_block.html#a2be5c38fdd477e75c1ff8b0bafe89322">DataBlock::Create</a>(C, 6);</div>

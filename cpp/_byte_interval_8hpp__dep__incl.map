@@ -1,10 +1,10 @@
 <map id="ByteInterval.hpp" name="ByteInterval.hpp">
-<area shape="rect" id="node1" title="Class gtirb::ByteInterval." alt="" coords="179,5,310,32"/>
-<area shape="rect" id="node2" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="44,80,163,107"/>
-<area shape="rect" id="node3" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="198,379,278,405"/>
-<area shape="rect" id="node5" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="283,229,382,256"/>
-<area shape="rect" id="node7" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="186,80,303,107"/>
-<area shape="rect" id="node8" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="378,155,477,181"/>
-<area shape="rect" id="node4" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="103,155,202,181"/>
-<area shape="rect" id="node6" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="327,304,389,331"/>
+<area shape="rect" id="node1" title="Class gtirb::ByteInterval." alt="" coords="108,5,239,32"/>
+<area shape="rect" id="node2" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="43,80,162,107"/>
+<area shape="rect" id="node3" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="136,379,216,405"/>
+<area shape="rect" id="node7" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="185,80,303,107"/>
+<area shape="rect" id="node8" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="331,155,429,181"/>
+<area shape="rect" id="node4" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="100,155,199,181"/>
+<area shape="rect" id="node5" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="160,229,259,256"/>
+<area shape="rect" id="node6" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="145,304,207,331"/>
 </map>

@@ -1,8 +1,5 @@
 <map id="CFG.hpp" name="CFG.hpp">
-<area shape="rect" id="node1" title="Types and operations for interprocedural control flow graphs (CFGs)." alt="" coords="141,5,219,32"/>
-<area shape="rect" id="node2" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="73,80,191,107"/>
-<area shape="rect" id="node3" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="67,379,147,405"/>
-<area shape="rect" id="node5" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="144,229,243,256"/>
-<area shape="rect" id="node6" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="195,304,258,331"/>
-<area shape="rect" id="node4" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="93,155,192,181"/>
+<area shape="rect" id="node1" title="Types and operations for interprocedural control flow graphs (CFGs)." alt="" coords="7,5,84,32"/>
+<area shape="rect" id="node2" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="5,155,85,181"/>
+<area shape="rect" id="node3" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="49,80,111,107"/>
 </map>

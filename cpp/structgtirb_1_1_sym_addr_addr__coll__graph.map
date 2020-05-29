@@ -1,5 +1,5 @@
 <map id="gtirb::SymAddrAddr" name="gtirb::SymAddrAddr">
 <area shape="rect" id="node1" title="Represents a symbolic operand of the form &quot;(Sym1 &#45; Sym2) / Scale + Offset&quot;." alt="" coords="5,185,155,212"/>
 <area shape="rect" id="node2" href="$classgtirb_1_1_symbol.html" title="Represents a Symbol, which maps a name to an object in the IR." alt="" coords="25,81,135,108"/>
-<area shape="rect" id="node3" href="$classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy." alt="" coords="33,5,127,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="52,5,108,32"/>
 </map>

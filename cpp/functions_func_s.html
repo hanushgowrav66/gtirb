@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -140,6 +140,13 @@ $(function() {
 <li>setVersion()
 : <a class="el" href="classgtirb_1_1_i_r.html#ac4ff179590bada3a065037494d3cd41c">gtirb::IR</a>
 </li>
+<li>size()
+: <a class="el" href="classgtirb_1_1_addr_range.html#af0e6f511ac7677a383cb599d7291c26d">gtirb::AddrRange</a>
+</li>
+<li>sizeChange()
+: <a class="el" href="classgtirb_1_1_code_block_observer.html#af6f7e5d23083075918537230b9b2dd61">gtirb::CodeBlockObserver</a>
+, <a class="el" href="classgtirb_1_1_data_block_observer.html#adcf919727dc5a48790f89f9e2b6e58d6">gtirb::DataBlockObserver</a>
+</li>
 <li>SpecificBumpPtrAllocator()
 : <a class="el" href="class_specific_bump_ptr_allocator.html#ac9d529a5651c71fa2a65d14bee514770">SpecificBumpPtrAllocator&lt; T &gt;</a>
 </li>
@@ -151,26 +158,26 @@ $(function() {
 </li>
 <li>symbolic_expressions_begin()
 : <a class="el" href="classgtirb_1_1_byte_interval.html#a1c4e81c32e735376131fc878366b1de9">gtirb::ByteInterval</a>
-, <a class="el" href="classgtirb_1_1_i_r.html#aba2f156d675149aed44503990e059ec8">gtirb::IR</a>
+, <a class="el" href="classgtirb_1_1_i_r.html#aae23fd1e9ed053efbaa581a6446c27e1">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#a31b74a520f6635234af856ac7902f7b3">gtirb::Module</a>
-, <a class="el" href="classgtirb_1_1_section.html#a6c931264550fe6df980e12d735b9bc71">gtirb::Section</a>
+, <a class="el" href="classgtirb_1_1_section.html#a4ba99a7fad018048a93a0f47b148198a">gtirb::Section</a>
 </li>
 <li>symbolic_expressions_end()
 : <a class="el" href="classgtirb_1_1_byte_interval.html#abb5331b945a2c31e33ce9cadb74bd4dd">gtirb::ByteInterval</a>
-, <a class="el" href="classgtirb_1_1_i_r.html#a7efdfe3f7df9511b23a5e60ce1376c8d">gtirb::IR</a>
+, <a class="el" href="classgtirb_1_1_i_r.html#af511b437e7ac64b110c8f28fd0d0df05">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#a97aa3b76d0e9781e0ea392270183d3b0">gtirb::Module</a>
-, <a class="el" href="classgtirb_1_1_section.html#a5b938221493f11ddc96fd31a632b482c">gtirb::Section</a>
+, <a class="el" href="classgtirb_1_1_section.html#a1f53ed3233ead4437f7237f0eea798fa">gtirb::Section</a>
 </li>
 <li>symbols()
 : <a class="el" href="classgtirb_1_1_i_r.html#ae1de1eee05544ce22be9e0c6d757db18">gtirb::IR</a>
-, <a class="el" href="classgtirb_1_1_module.html#a63911574b2995834e2af2035b78bef17">gtirb::Module</a>
+, <a class="el" href="classgtirb_1_1_module.html#aa74abc6ceeca9833fa934365d3a7af1a">gtirb::Module</a>
 </li>
 <li>symbols_begin()
-: <a class="el" href="classgtirb_1_1_i_r.html#a702ee99a610a5dd5c20b101ac712d84d">gtirb::IR</a>
-, <a class="el" href="classgtirb_1_1_module.html#a5f0ffab44a1d7733d1bd850174744d79">gtirb::Module</a>
+: <a class="el" href="classgtirb_1_1_i_r.html#aa61d02a57f84824ca789f3ffc5cba095">gtirb::IR</a>
+, <a class="el" href="classgtirb_1_1_module.html#a8a52b9310b44f29f428f0f54711e825a">gtirb::Module</a>
 </li>
 <li>symbols_by_addr()
-: <a class="el" href="classgtirb_1_1_module.html#a019297013983d07e2ee6ef25578c4d72">gtirb::Module</a>
+: <a class="el" href="classgtirb_1_1_module.html#a13a7bc313c2205c77561cab24cb8b758">gtirb::Module</a>
 </li>
 <li>symbols_by_addr_begin()
 : <a class="el" href="classgtirb_1_1_module.html#a8ca22409366353c79d62af77752276c5">gtirb::Module</a>
@@ -182,14 +189,14 @@ $(function() {
 : <a class="el" href="classgtirb_1_1_module.html#a465d5d7599397cf9cfb5dfe9bddf90c3">gtirb::Module</a>
 </li>
 <li>symbols_by_name_begin()
-: <a class="el" href="classgtirb_1_1_module.html#a35809137d77a3626b97aeb60eabfbb36">gtirb::Module</a>
+: <a class="el" href="classgtirb_1_1_module.html#a04eed01bd2ee3a828993f95e9dc6e300">gtirb::Module</a>
 </li>
 <li>symbols_by_name_end()
-: <a class="el" href="classgtirb_1_1_module.html#ae8c4a84b40cfc8db06542cffd13a299f">gtirb::Module</a>
+: <a class="el" href="classgtirb_1_1_module.html#ab7600d171a84312fa581478280b29848">gtirb::Module</a>
 </li>
 <li>symbols_end()
 : <a class="el" href="classgtirb_1_1_i_r.html#a1ee8cc613d9c4678b58dd977296ae1f7">gtirb::IR</a>
-, <a class="el" href="classgtirb_1_1_module.html#a10f81c698f2f576567d1e11a2ab45271">gtirb::Module</a>
+, <a class="el" href="classgtirb_1_1_module.html#a1d628882e5b2c8bca4dc330421ebd515">gtirb::Module</a>
 </li>
 </ul>
 </div><!-- contents -->

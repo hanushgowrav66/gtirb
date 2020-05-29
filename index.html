@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -127,7 +127,7 @@ UUIDs</h2>
 <p>Instructions and symbolic operands can be addressed by the class <code>Offset</code> which encapsulates a UUID (that refers to the instruction's block) and an offset.</p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Installing</h1>
-<p><a class="anchor" id="installing"></a> Packages currently existing for easily installing GTIRB (and attendant tooling including the <a href="https://github.com/GrammaTech/ddisasm">ddisasm</a> disassembler and <a href="https://github.com/GrammaTech/gtirb-pprinter">gtirb-pprinter</a> pretty printer) on Windows, Ubuntu, and Arch Linux. See below for instructions.</p>
+<p><a class="anchor" id="installing"></a> Packages currently existing for easily installing GTIRB (and attendant tooling including the <a href="https://github.com/GrammaTech/ddisasm">ddisasm</a> disassembler and <a href="https://github.com/GrammaTech/gtirb-pprinter">gtirb-pprinter</a> pretty printer) on Windows, Ubuntu, and Arch Linux. See below for instructions. GTIRB is versioned with Major.Minor.Patch versioning where Major version increments will require significant source changes but should be very rare, Minor version increments may require small source changes, and Patch version increments shouldn't break any downstream builds. We do not yet provide ABI compatibility across any version changes.</p>
 <h2><a class="anchor" id="autotoc_md7"></a>
 Windows</h2>
 <p><a class="anchor" id="windows"></a> Pre-built debug and release binaries are available for Windows at: <a href="https://grammatech.github.io/gtirb/pkgs/windows-debug/">windows-debug/</a>, and <a href="https://grammatech.github.io/gtirb/pkgs/windows-release/">windows-release/</a>. A symbol server for the debugging symbols for both the release and debug binaries is available at <a href="https://download.grammatech.com/gtirb/files/">https://download.grammatech.com/gtirb/files/</a>. For information about how to use a symbol server with your debugger, please see <a href="https://docs.microsoft.com/en-us/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger?view=vs-2019#BKMK_Specify_symbol_locations_and_loading_behavior">docs.microsoft.com::Specify_symbol_locations_and_loading_behavior</a> or your debugger's documentation.</p>
@@ -196,11 +196,12 @@ Using Serialized GTIRB Data</h2>
 <h2><a class="anchor" id="autotoc_md16"></a>
 GTIRB API Implementations</h2>
 <p><a class="anchor" id="gtirb-api-implementations"></a></p>
-<p>The GTIRB API is currently available in C++, Python, and Common Lisp. For language-independent API information, see GTIRBComponents". For information about the different API implementations, see:</p>
+<p>The GTIRB API is currently available in C++, Python, and Common Lisp. There is a <em>partial</em> Java API which is not ready for external use. For language-independent API information, see GTIRBComponents". For information about the different API implementations, see:</p>
 <ul>
 <li><a href="cpp/index.html">C++ API</a></li>
 <li><a href="python/index.html">Python API</a></li>
-<li><a href="cl/index.html">Common Lisp API</a> </li>
+<li><a href="cl/index.html">Common Lisp API</a></li>
+<li>Java API <b>incomplete</b> </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

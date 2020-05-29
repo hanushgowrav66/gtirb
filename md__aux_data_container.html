@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries</div>
   </td>
@@ -68,22 +68,22 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#autotoc_md58">AuxDataContainer</a><ul><li class="level2"><a href="#autotoc_md59">Guaranteed Properties</a></li>
-<li class="level2"><a href="#autotoc_md60">API Implementations</a><ul><li class="level3"><a href="#autotoc_md61">AuxDataContainer Classes and Node properties</a></li>
-<li class="level3"><a href="#autotoc_md62">string-&gt;AuxData map</a></li>
-<li class="level3"><a href="#autotoc_md63">AuxData Inspection</a></li>
+<ul><li class="level1"><a href="#autotoc_md59">AuxDataContainer</a><ul><li class="level2"><a href="#autotoc_md60">Guaranteed Properties</a></li>
+<li class="level2"><a href="#autotoc_md61">API Implementations</a><ul><li class="level3"><a href="#autotoc_md62">AuxDataContainer Classes and Node properties</a></li>
+<li class="level3"><a href="#autotoc_md63">string-&gt;AuxData map</a></li>
+<li class="level3"><a href="#autotoc_md64">AuxData Inspection</a></li>
 </ul>
 </li>
-<li class="level2"><a href="#autotoc_md64">Links</a></li>
+<li class="level2"><a href="#autotoc_md65">Links</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><h1><a class="anchor" id="autotoc_md58"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md59"></a>
 AuxDataContainer</h1>
 <p><a class="anchor" id="auxdatacontainer"></a></p>
 <p>An AuxDataContainer object provides functionality for associating <a class="el" href="md__aux_data.html">auxiliary data</a> with elements of the representation.</p>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 Guaranteed Properties</h2>
 <p><a class="anchor" id="guaranteed-properties"></a></p>
 <ul>
@@ -105,24 +105,24 @@ Guaranteed Properties</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md60"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 API Implementations</h2>
 <p><a class="anchor" id="api-implementations"></a></p>
 <p>The guaranteed functionality is provided as follows.</p>
-<h3><a class="anchor" id="autotoc_md61"></a>
+<h3><a class="anchor" id="autotoc_md62"></a>
 AuxDataContainer Classes and Node properties</h3>
 <p><a class="anchor" id="auxdatacontainer-classes-and-node-properties"></a></p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Language </th><th class="markdownTableHeadLeft">AuxDataContainer Class </th><th class="markdownTableHeadLeft">guaranteed Node Properties  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">C++ </td><td class="markdownTableBodyLeft"><a class="elRef" href="../html/cpp/classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> </td><td class="markdownTableBodyLeft">through inheritance from <a class="elRef" href="../html/cpp/classgtirb_1_1_node.html">gtirb::Node</a>  </td></tr>
+<td class="markdownTableBodyLeft">C++ </td><td class="markdownTableBodyLeft"><a class="elRef" href="../html/cpp/classgtirb_1_1_aux_data_container.html">gtirb::AuxDataContainer</a> </td><td class="markdownTableBodyLeft">through inheritance from gtirb::Node  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Python </td><td class="markdownTableBodyLeft"><a href="python/gtirb.html#gtirb.AuxDataContainer">gtirb.AuxDataContainer</a> </td><td class="markdownTableBodyLeft">through inheritance from <a href="python/gtirb.html#gtirb.Node">gtirb.Node</a>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft">No explicit implementation; relevant classes <b>ir</b> and <b>module</b> implement required functionality directly. </td><td class="markdownTableBodyLeft">.  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md62"></a>
+<h3><a class="anchor" id="autotoc_md63"></a>
 string-&gt;AuxData map</h3>
 <p><a class="anchor" id="string->auxdata-map"></a></p>
 <table class="markdownTable">
@@ -135,7 +135,7 @@ string-&gt;AuxData map</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>aux-data</b> <em>object</em> =&gt; <em>result</em> has <b>module</b> and <b>gtirb</b> specializations; extract the required named data extraction from the <em>result</em> alist </td><td class="markdownTableBodyLeft">extract auxiliary data alist with <b>aux-data</b> accessor, update alist as needed, then use (setf (<b>aux-data</b> <em>object</em>) <em>new-value</em>) which has <b>module</b> and <b>gtirb</b> specializations </td><td class="markdownTableBodyLeft">as for insert/overwrite  </td></tr>
 </table>
-<h3><a class="anchor" id="autotoc_md63"></a>
+<h3><a class="anchor" id="autotoc_md64"></a>
 AuxData Inspection</h3>
 <p><a class="anchor" id="auxdata-inspection"></a></p>
 <table class="markdownTable">
@@ -148,7 +148,7 @@ AuxData Inspection</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Common Lisp </td><td class="markdownTableBodyLeft"><b>aux-data-data</b> <em>aux-data</em> =&gt; <em>result</em> </td><td class="markdownTableBodyLeft"><b>aux-data-type</b> <em>aux-data</em> =&gt; <em>result</em>  </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md64"></a>
+<h2><a class="anchor" id="autotoc_md65"></a>
 Links</h2>
 <p><a class="anchor" id="links"></a></p>
 <ul>

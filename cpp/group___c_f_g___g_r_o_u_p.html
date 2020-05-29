@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -142,9 +142,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga8a20702c5f700c156869681cecb40e61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::optional&lt; CFG::edge_descriptor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga8a20702c5f700c156869681cecb40e61">gtirb::addEdge</a> (const <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *From, const <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *To, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga8a20702c5f700c156869681cecb40e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new edge between two CFG nodes if they exist in the graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga8a20702c5f700c156869681cecb40e61">More...</a><br /></td></tr>
 <tr class="separator:ga8a20702c5f700c156869681cecb40e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> CFG::vertex_descriptor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gab10aaeb0a362541494e5f2a8159d7ffc">gtirb::addVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *B, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
-<tr class="memdesc:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gab10aaeb0a362541494e5f2a8159d7ffc">More...</a><br /></td></tr>
-<tr class="separator:gab10aaeb0a362541494e5f2a8159d7ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab44a89bb681c95a710cd225e17bf324"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::pair&lt; CFG::vertex_descriptor, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaab44a89bb681c95a710cd225e17bf324">gtirb::addVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *B, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
+<tr class="memdesc:gaab44a89bb681c95a710cd225e17bf324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a node to the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gaab44a89bb681c95a710cd225e17bf324">More...</a><br /></td></tr>
+<tr class="separator:gaab44a89bb681c95a710cd225e17bf324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5039337a49b78d1fe67d47a61f8fcba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> boost::iterator_range&lt; <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga5cabebe153bdd1b9abe21cfdc10ed267">block_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga5039337a49b78d1fe67d47a61f8fcba9">gtirb::blocks</a> (<a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:ga5039337a49b78d1fe67d47a61f8fcba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a range of just the Block elements in the specified graph.  <a href="group___c_f_g___g_r_o_u_p.html#ga5039337a49b78d1fe67d47a61f8fcba9">More...</a><br /></td></tr>
 <tr class="separator:ga5039337a49b78d1fe67d47a61f8fcba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,9 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> boost::iterator_range&lt; <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga2db32369fb14f7f7f70c843f9ff0adbb">const_cfg_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaa6b3315d77e438da3f4f6a53c89df6a0">gtirb::nodes</a> (const <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
 <tr class="memdesc:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a constant range of the <a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> elements in the specified graph.  <a href="group___c_f_g___g_r_o_u_p.html#gaa6b3315d77e438da3f4f6a53c89df6a0">More...</a><br /></td></tr>
 <tr class="separator:gaa6b3315d77e438da3f4f6a53c89df6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">gtirb::removeVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
-<tr class="memdesc:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node from the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#ga3bc886d0b9c8d0d64c23e30b1188f555">More...</a><br /></td></tr>
-<tr class="separator:ga3bc886d0b9c8d0d64c23e30b1188f555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7231eb377163cc5539321abe705280a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_f_g___g_r_o_u_p.html#gaa7231eb377163cc5539321abe705280a">gtirb::removeVertex</a> (<a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *N, <a class="el" href="group___c_f_g___g_r_o_u_p.html#ga3081eeb52071b18e3928ee5f4b1671ed">CFG</a> &amp;Cfg)</td></tr>
+<tr class="memdesc:gaa7231eb377163cc5539321abe705280a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a node from the CFG.  <a href="group___c_f_g___g_r_o_u_p.html#gaa7231eb377163cc5539321abe705280a">More...</a><br /></td></tr>
+<tr class="separator:gaa7231eb377163cc5539321abe705280a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Interprocedural control flow graph, with vertices of type Block. </p>
@@ -421,14 +421,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab10aaeb0a362541494e5f2a8159d7ffc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab10aaeb0a362541494e5f2a8159d7ffc">&#9670;&nbsp;</a></span>addVertex()</h2>
+<a id="gaab44a89bb681c95a710cd225e17bf324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab44a89bb681c95a710cd225e17bf324">&#9670;&nbsp;</a></span>addVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> CFG::vertex_descriptor gtirb::addVertex </td>
+          <td class="memname"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> std::pair&lt;CFG::vertex_descriptor, bool&gt; gtirb::addVertex </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *&#160;</td>
           <td class="paramname"><em>B</em>, </td>
@@ -458,7 +458,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A descriptor which can be used to retrieve the node from the graph. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pair consisting of a descriptor to the vertex for that node and a <code>bool</code> indicating whether the graph was modified. </dd></dl>
 
 </div>
 </div>
@@ -620,14 +620,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga3bc886d0b9c8d0d64c23e30b1188f555"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3bc886d0b9c8d0d64c23e30b1188f555">&#9670;&nbsp;</a></span>removeVertex()</h2>
+<a id="gaa7231eb377163cc5539321abe705280a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7231eb377163cc5539321abe705280a">&#9670;&nbsp;</a></span>removeVertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> void gtirb::removeVertex </td>
+          <td class="memname"><a class="el" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> bool gtirb::removeVertex </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classgtirb_1_1_cfg_node.html">CfgNode</a> *&#160;</td>
           <td class="paramname"><em>N</em>, </td>
@@ -653,10 +653,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">N</td><td>The CFG node to remove. </td></tr>
-    <tr><td class="paramname">Cfg</td><td>The graph to modify. </td></tr>
+    <tr><td class="paramname">Cfg</td><td>The graph to modify.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code>bool</code> indicating whether the graph was modified. </dd></dl>
 
 </div>
 </div>

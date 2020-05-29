@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -69,6 +69,13 @@ $(function() {
 <li>CfgNode()
 : <a class="el" href="classgtirb_1_1_cfg_node.html#a924b02fc21b48184569ea41d6898a50a">gtirb::CfgNode</a>
 </li>
+<li>changeExtent()
+: <a class="el" href="classgtirb_1_1_byte_interval_observer.html#ae6a78a9741e2dbf882affc7ceb68a78e">gtirb::ByteIntervalObserver</a>
+, <a class="el" href="classgtirb_1_1_section_observer.html#abe06f388580f1c8b799ba85eef300103">gtirb::SectionObserver</a>
+</li>
+<li>classof()
+: <a class="el" href="classgtirb_1_1_proxy_block.html#a1c3c42e5c69feeff86e5a6e578d6a9ac">gtirb::ProxyBlock</a>
+</li>
 <li>clearAuxData()
 : <a class="el" href="classgtirb_1_1_aux_data_container.html#a34ab7ddd5808ad2b2f0f58fda340df91">gtirb::AuxDataContainer</a>
 </li>
@@ -91,7 +98,7 @@ $(function() {
 , <a class="el" href="classgtirb_1_1_section.html#aeed465c83a488c1aad36290948310861">gtirb::Section</a>
 </li>
 <li>code_blocks()
-: <a class="el" href="classgtirb_1_1_byte_interval.html#aa1770e97b003da509e318ee34f728fe9">gtirb::ByteInterval</a>
+: <a class="el" href="classgtirb_1_1_byte_interval.html#aec8ef982b7b2b4862e3fe569de719832">gtirb::ByteInterval</a>
 , <a class="el" href="classgtirb_1_1_i_r.html#a9fbb5a209086f65282819375f5ec49ab">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#a139827a5560aba44be7ff4085f38ad39">gtirb::Module</a>
 , <a class="el" href="classgtirb_1_1_section.html#a3f5f0bc8d8762bc3119d83c3722ec411">gtirb::Section</a>
@@ -103,7 +110,7 @@ $(function() {
 , <a class="el" href="classgtirb_1_1_section.html#ac2b86a784cb55eefbcf5b912ddb1c436">gtirb::Section</a>
 </li>
 <li>code_blocks_end()
-: <a class="el" href="classgtirb_1_1_byte_interval.html#a57d7f6f0b9c401e3cce9f4857bd26c3d">gtirb::ByteInterval</a>
+: <a class="el" href="classgtirb_1_1_byte_interval.html#a6f35d331b2c4cd8873ee3eeaf2fb2d29">gtirb::ByteInterval</a>
 , <a class="el" href="classgtirb_1_1_i_r.html#a6dce5404fd1f016e213a0f0d71a82f0a">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#a54af4a96b1885ed431b6b805b7a05f40">gtirb::Module</a>
 , <a class="el" href="classgtirb_1_1_section.html#a0f2cc1525f69a6dd79d19c5dd2b6dcce">gtirb::Section</a>
@@ -285,19 +292,17 @@ $(function() {
 , <a class="el" href="classgtirb_1_1_data_block.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::DataBlock</a>
 , <a class="el" href="classgtirb_1_1_i_r.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::Module</a>
-, <a class="el" href="classgtirb_1_1_node.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::Node</a>
 , <a class="el" href="classgtirb_1_1_proxy_block.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::ProxyBlock</a>
 , <a class="el" href="classgtirb_1_1_section.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::Section</a>
 , <a class="el" href="classgtirb_1_1_symbol.html#ac26c806e60ca4a0547680edb68f6e39b">gtirb::Symbol</a>
 </li>
 <li>Create()
 : <a class="el" href="classgtirb_1_1_byte_interval.html#a18925fb9dca97989ae51261de981deed">gtirb::ByteInterval</a>
-, <a class="el" href="classgtirb_1_1_code_block.html#a718bb0acbd3e2dcfc1ea0dc8068ebf57">gtirb::CodeBlock</a>
+, <a class="el" href="classgtirb_1_1_code_block.html#a766952bca15528b62280f72ad700d3fc">gtirb::CodeBlock</a>
 , <a class="el" href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">gtirb::Context</a>
 , <a class="el" href="classgtirb_1_1_data_block.html#a2be5c38fdd477e75c1ff8b0bafe89322">gtirb::DataBlock</a>
 , <a class="el" href="classgtirb_1_1_i_r.html#a70cecfd85801a7d3273f109ce230331f">gtirb::IR</a>
 , <a class="el" href="classgtirb_1_1_module.html#a998f49d2011b8b589d6fcfb4e1268341">gtirb::Module</a>
-, <a class="el" href="classgtirb_1_1_node.html#ab34e75309d3cdbae6ae783483152bf1c">gtirb::Node</a>
 , <a class="el" href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">gtirb::ProxyBlock</a>
 , <a class="el" href="classgtirb_1_1_section.html#a7f089038bffa70c29229143d0112d264">gtirb::Section</a>
 , <a class="el" href="classgtirb_1_1_symbol.html#aa408314cecbb0d081ec02585158cc85f">gtirb::Symbol</a>

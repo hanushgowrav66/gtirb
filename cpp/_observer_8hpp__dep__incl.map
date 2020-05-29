@@ -1,0 +1,11 @@
+<map id="Observer.hpp" name="Observer.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="363,5,471,32"/>
+<area shape="rect" id="node2" href="$_byte_interval_8hpp.html" title="Class gtirb::ByteInterval." alt="" coords="179,80,310,107"/>
+<area shape="rect" id="node6" href="$_module_8hpp.html" title="Class gtirb::Module and related functions and types." alt="" coords="291,304,390,331"/>
+<area shape="rect" id="node7" href="$_i_r_8hpp.html" title="Class gtirb::IR." alt="" coords="465,379,528,405"/>
+<area shape="rect" id="node9" href="$_section_8hpp.html" title="Class gtirb::Section." alt="" coords="393,229,491,256"/>
+<area shape="rect" id="node3" href="$_code_block_8hpp.html" title="Classes gtirb::CodeBlock and gtirb::Offset." alt="" coords="44,155,163,181"/>
+<area shape="rect" id="node4" href="$gtirb_8hpp.html" title="#include this file to include all GTIRB API headers." alt="" coords="214,453,294,480"/>
+<area shape="rect" id="node8" href="$_data_block_8hpp.html" title="Class gtirb::DataBlock." alt="" coords="186,155,303,181"/>
+<area shape="rect" id="node5" href="$_symbol_8hpp.html" title="Class gtirb::Symbol." alt="" coords="118,229,217,256"/>
+</map>

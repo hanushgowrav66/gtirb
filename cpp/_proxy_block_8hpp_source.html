@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -90,72 +90,68 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_cfg_node_8hpp.html">gtirb/CfgNode.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_node_8hpp.html">gtirb/Node.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;gtirb/proto/ProxyBlock.pb.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegtirb.html">gtirb</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>Module;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html">   45</a></span>&#160;<span class="keyword">class </span><a class="code" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> <a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a> : <span class="keyword">public</span> <a class="code" href="classgtirb_1_1_cfg_node.html">CfgNode</a> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">   50</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">Create</a>(<a class="code" href="classgtirb_1_1_context.html">Context</a>&amp; C) { <span class="keywordflow">return</span> C.<a class="code" href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">Create</a>&lt;<a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>&gt;(C); }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">   53</a></span>&#160;  <a class="code" href="classgtirb_1_1_module.html">Module</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">getModule</a>() { <span class="keywordflow">return</span> Parent; }</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">   55</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classgtirb_1_1_module.html">Module</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">getModule</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Parent; }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> classof(<span class="keyword">const</span> <a class="code" href="classgtirb_1_1_node.html">Node</a>* N) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> N-&gt;getKind() == Kind::ProxyBlock;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  ProxyBlock(Context&amp; C) : CfgNode(C, Kind::ProxyBlock) {}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  ProxyBlock(Context&amp; C, Module* P) : CfgNode(C, Kind::ProxyBlock), Parent(P) {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacegtirb.html">gtirb</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>proto {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span>ProxyBlock;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">class </span>Module;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a> <a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a> : <span class="keyword">public</span> <a class="code" href="classgtirb_1_1_cfg_node.html">CfgNode</a> {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">   52</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">Create</a>(<a class="code" href="classgtirb_1_1_context.html">Context</a>&amp; C) { <span class="keywordflow">return</span> C.<a class="code" href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">Create</a>&lt;<a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>&gt;(C); }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">   55</a></span>&#160;  <a class="code" href="classgtirb_1_1_module.html">Module</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">getModule</a>() { <span class="keywordflow">return</span> Parent; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">   57</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classgtirb_1_1_module.html">Module</a>* <a class="code" href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">getModule</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Parent; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a1c3c42e5c69feeff86e5a6e578d6a9ac">   59</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classgtirb_1_1_proxy_block.html#a1c3c42e5c69feeff86e5a6e578d6a9ac">classof</a>(<span class="keyword">const</span> Node* N) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> N-&gt;getKind() == Kind::ProxyBlock;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>(<a class="code" href="classgtirb_1_1_context.html">Context</a>&amp; C) : <a class="code" href="classgtirb_1_1_cfg_node.html">CfgNode</a>(C, Kind::<a class="code" href="classgtirb_1_1_proxy_block.html">ProxyBlock</a>) {}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> setModule(Module* M) { Parent = M; }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">static</span> ProxyBlock* Create(Context&amp; C, Module* Parent) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> C.Create&lt;ProxyBlock&gt;(C, Parent);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">using</span> MessageType = proto::ProxyBlock;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> toProtobuf(MessageType* Message) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">using</span> MessageType = proto::ProxyBlock;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> toProtobuf(MessageType* Message) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keyword">static</span> ProxyBlock* fromProtobuf(Context&amp; C, Module* Parent,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                  <span class="keyword">const</span> MessageType&amp; Message);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="comment">// Present for testing purposes only.</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">void</span> save(std::ostream&amp; Out) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// Present for testing purposes only.</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keyword">static</span> ProxyBlock* load(Context&amp; C, std::istream&amp; In);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keyword">static</span> ProxyBlock* fromProtobuf(Context&amp; C, <span class="keyword">const</span> MessageType&amp; Message);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="comment">// Present for testing purposes only.</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">void</span> save(std::ostream&amp; Out) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// Present for testing purposes only.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keyword">static</span> ProxyBlock* load(Context&amp; C, std::istream&amp; In);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  Module* Parent{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#ac26c806e60ca4a0547680edb68f6e39b">   95</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgtirb_1_1_context.html">Context</a>; <span class="comment">// Allow Context to construct proxies.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a21f639900c480510650969df9c74d17d">   96</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgtirb_1_1_module.html">Module</a>;  <span class="comment">// Allow Module to call setModule, Create, etc.</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// Allows serializaton from Module via sequenceToProtobuf.</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a5b1d8b9077f0c366aaae7069e7d03a3f">   98</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">friend</span> <span class="keyword">typename</span> T::MessageType <a class="code" href="classgtirb_1_1_proxy_block.html#a5b1d8b9077f0c366aaae7069e7d03a3f">toProtobuf</a>(<span class="keyword">const</span> T&amp;);</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#aca7995861301f2eefb390acea47c34a9">   99</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>SerializationTestHarness; <span class="comment">// Testing support.</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace gtirb</span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  Module* Parent{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#ac26c806e60ca4a0547680edb68f6e39b">  106</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgtirb_1_1_context.html">Context</a>; <span class="comment">// Allow Context to construct proxies.</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a21f639900c480510650969df9c74d17d">  107</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classgtirb_1_1_module.html">Module</a>;  <span class="comment">// Allow Module to call setModule, Create, etc.</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="comment">// Allows serializaton from Module via sequenceToProtobuf.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#a5b1d8b9077f0c366aaae7069e7d03a3f">  109</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">friend</span> <span class="keyword">typename</span> T::MessageType <a class="code" href="classgtirb_1_1_proxy_block.html#a5b1d8b9077f0c366aaae7069e7d03a3f">toProtobuf</a>(<span class="keyword">const</span> T&amp;);</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="classgtirb_1_1_proxy_block.html#aca7995861301f2eefb390acea47c34a9">  110</a></span>&#160;  <span class="keyword">friend</span> <span class="keyword">class </span>SerializationTestHarness; <span class="comment">// Testing support.</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <span class="comment">// namespace gtirb</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif // GTIRB_PROXY_BLOCK_H</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif // GTIRB_PROXY_BLOCK_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassgtirb_1_1_context_html_a097d32a5178babd1f999d46feb90de58"><div class="ttname"><a href="classgtirb_1_1_context.html#a097d32a5178babd1f999d46feb90de58">gtirb::Context::Create</a></div><div class="ttdeci">NodeTy * Create(Args &amp;&amp;... TheArgs)</div><div class="ttdoc">Create an object of type T.</div><div class="ttdef"><b>Definition:</b> Context.hpp:126</div></div>
-<div class="ttc" id="aclassgtirb_1_1_node_html"><div class="ttname"><a href="classgtirb_1_1_node.html">gtirb::Node</a></div><div class="ttdoc">Represents the base of the Node class hierarchy.</div><div class="ttdef"><b>Definition:</b> Node.hpp:39</div></div>
 <div class="ttc" id="aclassgtirb_1_1_cfg_node_html"><div class="ttname"><a href="classgtirb_1_1_cfg_node.html">gtirb::CfgNode</a></div><div class="ttdoc">Represents the base of types that can be inserted into the CFG.</div><div class="ttdef"><b>Definition:</b> CfgNode.hpp:30</div></div>
-<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a3da90158ddc23ca00c88cfd33b44edcf"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">gtirb::ProxyBlock::getModule</a></div><div class="ttdeci">Module * getModule()</div><div class="ttdoc">Get the Module this block belongs to.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:53</div></div>
+<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a3da90158ddc23ca00c88cfd33b44edcf"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a3da90158ddc23ca00c88cfd33b44edcf">gtirb::ProxyBlock::getModule</a></div><div class="ttdeci">Module * getModule()</div><div class="ttdoc">Get the Module this block belongs to.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:55</div></div>
 <div class="ttc" id="aclassgtirb_1_1_context_html"><div class="ttname"><a href="classgtirb_1_1_context.html">gtirb::Context</a></div><div class="ttdoc">The context under which GTIRB operations occur.</div><div class="ttdef"><b>Definition:</b> Context.hpp:63</div></div>
 <div class="ttc" id="a_node_8hpp_html"><div class="ttname"><a href="_node_8hpp.html">Node.hpp</a></div><div class="ttdoc">Class gtirb::Node.</div></div>
 <div class="ttc" id="a_export_8hpp_html_a54b10f85bcd66580e3756cef113b74d1"><div class="ttname"><a href="_export_8hpp.html#a54b10f85bcd66580e3756cef113b74d1">GTIRB_EXPORT_API</a></div><div class="ttdeci">#define GTIRB_EXPORT_API</div><div class="ttdoc">This macro controls the visibility of exported symbols (i.e. classes) in shared libraries....</div><div class="ttdef"><b>Definition:</b> Export.hpp:52</div></div>
 <div class="ttc" id="anamespacegtirb_html"><div class="ttname"><a href="namespacegtirb.html">gtirb</a></div><div class="ttdoc">Main namespace for the GTIRB API.</div><div class="ttdef"><b>Definition:</b> Addr.hpp:28</div></div>
-<div class="ttc" id="aclassgtirb_1_1_proxy_block_html"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html">gtirb::ProxyBlock</a></div><div class="ttdoc">A placeholder that serves as the endpoint (source or target) of a CFG edge.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:45</div></div>
+<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a1c3c42e5c69feeff86e5a6e578d6a9ac"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a1c3c42e5c69feeff86e5a6e578d6a9ac">gtirb::ProxyBlock::classof</a></div><div class="ttdeci">static bool classof(const Node *N)</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:59</div></div>
+<div class="ttc" id="aclassgtirb_1_1_proxy_block_html"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html">gtirb::ProxyBlock</a></div><div class="ttdoc">A placeholder that serves as the endpoint (source or target) of a CFG edge.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:47</div></div>
 <div class="ttc" id="a_cfg_node_8hpp_html"><div class="ttname"><a href="_cfg_node_8hpp.html">CfgNode.hpp</a></div><div class="ttdoc">Base class for nodes of the CFG.</div></div>
-<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a870408f67745c94a813e1716481398a2"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">gtirb::ProxyBlock::Create</a></div><div class="ttdeci">static ProxyBlock * Create(Context &amp;C)</div><div class="ttdoc">Create an unitialized ProxyBlock object.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:50</div></div>
-<div class="ttc" id="aclassgtirb_1_1_module_html"><div class="ttname"><a href="classgtirb_1_1_module.html">gtirb::Module</a></div><div class="ttdoc">Represents a single binary (library or executable).</div><div class="ttdef"><b>Definition:</b> Module.hpp:97</div></div>
-<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a44b66f61f506ee8e39c4e98b2b85cb09"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">gtirb::ProxyBlock::getModule</a></div><div class="ttdeci">const Module * getModule() const</div><div class="ttdoc">Get the Module this block belongs to.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:55</div></div>
+<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a870408f67745c94a813e1716481398a2"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a870408f67745c94a813e1716481398a2">gtirb::ProxyBlock::Create</a></div><div class="ttdeci">static ProxyBlock * Create(Context &amp;C)</div><div class="ttdoc">Create an unitialized ProxyBlock object.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:52</div></div>
+<div class="ttc" id="aclassgtirb_1_1_module_html"><div class="ttname"><a href="classgtirb_1_1_module.html">gtirb::Module</a></div><div class="ttdoc">Represents a single binary (library or executable).</div><div class="ttdef"><b>Definition:</b> Module.hpp:98</div></div>
+<div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a44b66f61f506ee8e39c4e98b2b85cb09"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a44b66f61f506ee8e39c4e98b2b85cb09">gtirb::ProxyBlock::getModule</a></div><div class="ttdeci">const Module * getModule() const</div><div class="ttdoc">Get the Module this block belongs to.</div><div class="ttdef"><b>Definition:</b> ProxyBlock.hpp:57</div></div>
 <div class="ttc" id="aclassgtirb_1_1_proxy_block_html_a5b1d8b9077f0c366aaae7069e7d03a3f"><div class="ttname"><a href="classgtirb_1_1_proxy_block.html#a5b1d8b9077f0c366aaae7069e7d03a3f">gtirb::ProxyBlock::toProtobuf</a></div><div class="ttdeci">friend T::MessageType toProtobuf(const T &amp;)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,11 +1,10 @@
 <map id="Offset.hpp" name="Offset.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="610,5,699,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="558,5,647,32"/>
 <area shape="rect" id="node2" href="$_context_8hpp.html" title="Class gtirb::Context and related operators." alt="" coords="535,80,670,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="5,229,72,256"/>
 <area shape="rect" id="node12" href="$_export_8hpp.html" title=" " alt="" coords="159,155,286,181"/>
 <area shape="rect" id="node13" title=" " alt="" coords="778,155,969,181"/>
 <area shape="rect" id="node15" title=" " alt="" coords="993,155,1079,181"/>
-<area shape="rect" id="node17" title=" " alt="" coords="796,80,961,107"/>
 <area shape="rect" id="node3" href="$_allocator_8hpp.html" title=" " alt="" coords="311,155,452,181"/>
 <area shape="rect" id="node8" title=" " alt="" coords="659,229,725,256"/>
 <area shape="rect" id="node14" title=" " alt="" coords="527,155,678,181"/>

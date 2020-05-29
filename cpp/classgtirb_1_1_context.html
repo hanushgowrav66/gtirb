@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GTIRB
-   &#160;<span id="projectnumber">v1.7.1</span>
+   &#160;<span id="projectnumber">v1.8.4</span>
    </div>
    <div id="projectbrief">GrammaTech Intermediate Representation for Binaries: C++ API</div>
   </td>
@@ -98,12 +98,11 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a6db9d28bd448a131448276ee03de1e6d"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgtirb_1_1_context.html#a6db9d28bd448a131448276ee03de1e6d">Node</a></td></tr>
-<tr class="memdesc:a6db9d28bd448a131448276ee03de1e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base of the <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> class hierarchy.  <a href="classgtirb_1_1_context.html#a6db9d28bd448a131448276ee03de1e6d">More...</a><br /></td></tr>
 <tr class="separator:a6db9d28bd448a131448276ee03de1e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The context under which GTIRB operations occur. </p>
-<p>This object is responsible for holding serialization and serialization state, allowing for control over when <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> memory can be released and providing a mechanism for ensuring thread safety.</p>
+<p>This object is responsible for holding serialization and serialization state, allowing for control over when Node memory can be released and providing a mechanism for ensuring thread safety.</p>
 <p>Any API that requires a <a class="el" href="classgtirb_1_1_context.html">Context</a> object may potentially allocate memory within that context. Destroying the <a class="el" href="classgtirb_1_1_context.html" title="The context under which GTIRB operations occur.">Context</a> object will release that memory. In a multithreaded environment, sharing a <a class="el" href="classgtirb_1_1_context.html" title="The context under which GTIRB operations occur.">Context</a> object across multiple threads can introduce data races, so protecting the object with a locking primitive is recommended. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a72cade489dce27de62711245a4f0461f"></a>
@@ -215,7 +214,7 @@ template&lt;typename NodeTy , typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classgtirb_1_1_node.html">Node</a></td>
+          <td class="memname">friend class Node</td>
         </tr>
       </table>
   </td>
@@ -225,7 +224,7 @@ template&lt;typename NodeTy , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Represents the base of the <a class="el" href="classgtirb_1_1_node.html" title="Represents the base of the Node class hierarchy.">Node</a> class hierarchy. </p>
+<p></p>
 
 </div>
 </div>

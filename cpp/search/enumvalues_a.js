@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['raw_839',['RAW',['../namespacegtirb.html#a7e4c1ed3a95c05b68d4b4f6b5d4282b0a633d6abff0a3fc22404347728d195059',1,'gtirb']]],
-  ['readable_840',['Readable',['../namespacegtirb.html#abcbde83fd8333cc5d219967b53e574bca4b8123df4e2b3456270c11394adf7607',1,'gtirb']]],
-  ['return_841',['Return',['../group___c_f_g___g_r_o_u_p.html#gga5f75f57b6145b26ece90283a7b524b9da988fd738de9c6d177440c5dcf69e73ce',1,'gtirb']]]
+  ['pe_901',['PE',['../namespacegtirb.html#a7e4c1ed3a95c05b68d4b4f6b5d4282b0a3acf83834396fa1c878707132ead62b8',1,'gtirb']]],
+  ['ppc32_902',['PPC32',['../namespacegtirb.html#a3a3936a9fcf87b0ae27bca9ac7b91b85a358d85b7f7e71ef856da0440809ff8ed',1,'gtirb']]],
+  ['ppc64_903',['PPC64',['../namespacegtirb.html#a3a3936a9fcf87b0ae27bca9ac7b91b85a8fff0776edd5df0ef5e8c68ef6051c9b',1,'gtirb']]]
 ];
